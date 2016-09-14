@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  4.11
+//
+//  Created by SU on 16/7/27.
+//  Copyright © 2016年 SU. All rights reserved.
+//
+
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import <UIImage+GIF.h>
+#include <objc/runtime.h>
+#import <objc/message.h>
+#import "QLCommonMethod.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+ShowMessage.h"
+#import "UIImage+Category.h"
+
+/***           view           ***/
+
+#import "view1.h"
+#import "ThrowLineTool.h"
+
+/****           宏定义         ****/
+
+#define KScreenSize [[UIScreen mainScreen] bounds].size
+#define adoptValue(a) ((KScreenSize.width/375.0) * a)
+
+
+//# define QLLog(fmt,...)  NSLog((@"%s" fmt),__PRETTY_FUNCTION__,##__VA_ARGS__);
+# define SYLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#ifdef DEBUG
+
+#define QLLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define QLLog(...)
+
+#endif
