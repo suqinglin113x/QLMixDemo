@@ -43,7 +43,10 @@
      
     }
 }
-
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    return nil;
+}
 /**
  *  下载新图片
  *

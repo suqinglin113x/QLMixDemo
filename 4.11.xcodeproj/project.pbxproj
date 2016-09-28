@@ -37,6 +37,11 @@
 		90545DDF1D01715500139FCE /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 90545DDE1D01715500139FCE /* ViewController4.m */; };
 		90569DC31CD98CBF002A34B0 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90569DC11CD98CBF002A34B0 /* Contacts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		90569DC41CD98CBF002A34B0 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90569DC21CD98CBF002A34B0 /* ContactsUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		905DE7AB1D8FB73000492F04 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7AA1D8FB73000492F04 /* SWRevealViewController.m */; };
+		905DE7AE1D8FB8B600492F04 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7AD1D8FB8B600492F04 /* RightViewController.m */; };
+		905DE7B11D8FB8C200492F04 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B01D8FB8C200492F04 /* LeftViewController.m */; };
+		905DE7B41D8FD09A00492F04 /* SViewController2demo1.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B31D8FD09A00492F04 /* SViewController2demo1.m */; };
+		905DE7B71D8FD72A00492F04 /* Demo1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B61D8FD72A00492F04 /* Demo1Cell.m */; };
 		905FE1301CEE9BEA00161E45 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 905FE12F1CEE9BEA00161E45 /* ViewController3.m */; };
 		9068F83D1D52D14300F7D2D0 /* ViewController9.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F83C1D52D14300F7D2D0 /* ViewController9.m */; };
 		9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F8411D52D18000F7D2D0 /* PCCircle.m */; };
@@ -62,6 +67,9 @@
 		90B394B71CCA1A3600E85AFE /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B394B61CCA1A3600E85AFE /* ViewController2.m */; };
 		90BE2E041CBE37C000F90BE2 /* CTPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BE2E031CBE37C000F90BE2 /* CTPropertyViewController.m */; };
 		90C7FECB1D2DE22800E7FAF6 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7FECA1D2DE22800E7FAF6 /* TestModel1.m */; };
+		90E771C81D98F3D9001060C8 /* SViewControllerDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */; };
+		90E771CB1D98FBE2001060C8 /* QLFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771CA1D98FBE2001060C8 /* QLFlowLayout.m */; };
+		90E771CE1D98FD65001060C8 /* FallWaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771CD1D98FD65001060C8 /* FallWaterCell.m */; };
 		90E80B511D8799AE00B12F2F /* SEViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80B501D8799AE00B12F2F /* SEViewController1.m */; };
 		90E80B5E1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80B5D1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m */; };
 		90ECF9341D864CEA006605F2 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ECF9331D864CEA006605F2 /* ADViewController.m */; };
@@ -164,6 +172,16 @@
 		90545DDE1D01715500139FCE /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
 		90569DC11CD98CBF002A34B0 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		90569DC21CD98CBF002A34B0 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		905DE7A91D8FB73000492F04 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		905DE7AA1D8FB73000492F04 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		905DE7AC1D8FB8B600492F04 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		905DE7AD1D8FB8B600492F04 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		905DE7AF1D8FB8C200492F04 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		905DE7B01D8FB8C200492F04 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		905DE7B21D8FD09A00492F04 /* SViewController2demo1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SViewController2demo1.h; sourceTree = "<group>"; };
+		905DE7B31D8FD09A00492F04 /* SViewController2demo1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SViewController2demo1.m; sourceTree = "<group>"; };
+		905DE7B51D8FD72A00492F04 /* Demo1Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo1Cell.h; sourceTree = "<group>"; };
+		905DE7B61D8FD72A00492F04 /* Demo1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1Cell.m; sourceTree = "<group>"; };
 		905FE12E1CEE9BEA00161E45 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		905FE12F1CEE9BEA00161E45 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
 		9068F83B1D52D14300F7D2D0 /* ViewController9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController9.h; sourceTree = "<group>"; };
@@ -193,6 +211,7 @@
 		90710C4C1D794B490056DEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907126E51D4880EE00333E6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		907126E71D48876000333E6D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		907248DF1D9366A000C8702E /* 4.11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 4.11.entitlements; sourceTree = "<group>"; };
 		907C8B381CE17F900041B709 /* QLCommonMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCommonMethod.h; sourceTree = "<group>"; };
 		907C8B391CE17F900041B709 /* QLCommonMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCommonMethod.m; sourceTree = "<group>"; };
 		907C8B3B1CE1877F0041B709 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -221,6 +240,12 @@
 		90BE2E021CBE37C000F90BE2 /* CTPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPropertyViewController.h; sourceTree = "<group>"; };
 		90BE2E031CBE37C000F90BE2 /* CTPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPropertyViewController.m; sourceTree = "<group>"; };
 		90C7FECA1D2DE22800E7FAF6 /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
+		90E771C61D98F3D9001060C8 /* SViewControllerDemo2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SViewControllerDemo2.h; sourceTree = "<group>"; };
+		90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SViewControllerDemo2.m; sourceTree = "<group>"; };
+		90E771C91D98FBE2001060C8 /* QLFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLFlowLayout.h; sourceTree = "<group>"; };
+		90E771CA1D98FBE2001060C8 /* QLFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLFlowLayout.m; sourceTree = "<group>"; };
+		90E771CC1D98FD65001060C8 /* FallWaterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FallWaterCell.h; sourceTree = "<group>"; };
+		90E771CD1D98FD65001060C8 /* FallWaterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallWaterCell.m; sourceTree = "<group>"; };
 		90E80B4F1D8799AE00B12F2F /* SEViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEViewController1.h; sourceTree = "<group>"; };
 		90E80B501D8799AE00B12F2F /* SEViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEViewController1.m; sourceTree = "<group>"; };
 		90E80B5C1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ShowMessage.h"; sourceTree = "<group>"; };
@@ -416,6 +441,10 @@
 				902A90B41D827DF600EAAF05 /* SecondController.m */,
 				90E80B4F1D8799AE00B12F2F /* SEViewController1.h */,
 				90E80B501D8799AE00B12F2F /* SEViewController1.m */,
+				905DE7B21D8FD09A00492F04 /* SViewController2demo1.h */,
+				905DE7B31D8FD09A00492F04 /* SViewController2demo1.m */,
+				90E771C61D98F3D9001060C8 /* SViewControllerDemo2.h */,
+				90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,6 +459,12 @@
 		902A90C01D82874E00EAAF05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				905DE7B51D8FD72A00492F04 /* Demo1Cell.h */,
+				905DE7B61D8FD72A00492F04 /* Demo1Cell.m */,
+				90E771C91D98FBE2001060C8 /* QLFlowLayout.h */,
+				90E771CA1D98FBE2001060C8 /* QLFlowLayout.m */,
+				90E771CC1D98FD65001060C8 /* FallWaterCell.h */,
+				90E771CD1D98FD65001060C8 /* FallWaterCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -468,6 +503,15 @@
 				90E80B5D1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m */,
 			);
 			name = Extentions;
+			sourceTree = "<group>";
+		};
+		905DE7A81D8FB73000492F04 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				905DE7A91D8FB73000492F04 /* SWRevealViewController.h */,
+				905DE7AA1D8FB73000492F04 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		9068F83E1D52D18000F7D2D0 /* shoushimima */ = {
@@ -594,8 +638,13 @@
 		908A75971CBB354D00FBF20B /* 4.11 */ = {
 			isa = PBXGroup;
 			children = (
+				907248DF1D9366A000C8702E /* 4.11.entitlements */,
 				908A759B1CBB354D00FBF20B /* AppDelegate.h */,
 				908A759C1CBB354D00FBF20B /* AppDelegate.m */,
+				905DE7AC1D8FB8B600492F04 /* RightViewController.h */,
+				905DE7AD1D8FB8B600492F04 /* RightViewController.m */,
+				905DE7AF1D8FB8C200492F04 /* LeftViewController.h */,
+				905DE7B01D8FB8C200492F04 /* LeftViewController.m */,
 				90ECF9381D868E1A006605F2 /* Splash AD */,
 				901044F01D63F7AA004FD5E8 /* FirstViewcontrollers */,
 				902A90B11D827D9500EAAF05 /* SecondControllers */,
@@ -682,6 +731,7 @@
 		90F67B251D21035E00469186 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				905DE7A81D8FB73000492F04 /* SWRevealViewController */,
 				9068F83E1D52D18000F7D2D0 /* shoushimima */,
 				90F67B261D21038600469186 /* Masonry */,
 			);
@@ -824,6 +874,14 @@
 					908A75941CBB354D00FBF20B = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 95V9X93GJM;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					908A75AD1CBB354D00FBF20B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -946,24 +1004,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E771CE1D98FD65001060C8 /* FallWaterCell.m in Sources */,
 				9068F83D1D52D14300F7D2D0 /* ViewController9.m in Sources */,
 				90ECF9341D864CEA006605F2 /* ADViewController.m in Sources */,
 				9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */,
 				90E80B511D8799AE00B12F2F /* SEViewController1.m in Sources */,
 				907C8B881CE1E9C90041B709 /* 核心绘图.m in Sources */,
+				905DE7AE1D8FB8B600492F04 /* RightViewController.m in Sources */,
 				908A75A01CBB354D00FBF20B /* ViewController.m in Sources */,
 				90F67B4B1D2350E600469186 /* ViewController7.m in Sources */,
 				902A90B51D827DF600EAAF05 /* SecondController.m in Sources */,
 				90FF34B31D73C7B0007D5C61 /* WKWebViewController.m in Sources */,
 				9068F84F1D52D18000F7D2D0 /* PCCircleView.m in Sources */,
 				9068F8521D52D18000F7D2D0 /* PCCircleInfoView.m in Sources */,
+				905DE7B71D8FD72A00492F04 /* Demo1Cell.m in Sources */,
+				905DE7AB1D8FB73000492F04 /* SWRevealViewController.m in Sources */,
 				908A759D1CBB354D00FBF20B /* AppDelegate.m in Sources */,
 				903FDDDB1D51875A00FD6072 /* shadowView.m in Sources */,
 				901C17691D46EEBF0043D93D /* view1.m in Sources */,
 				90B394B71CCA1A3600E85AFE /* ViewController2.m in Sources */,
+				90E771CB1D98FBE2001060C8 /* QLFlowLayout.m in Sources */,
 				90F67B401D21038600469186 /* MASCompositeConstraint.m in Sources */,
 				904C002D1D7E92BE00570C44 /* NSNotificationModel.m in Sources */,
 				90BE2E041CBE37C000F90BE2 /* CTPropertyViewController.m in Sources */,
+				905DE7B41D8FD09A00492F04 /* SViewController2demo1.m in Sources */,
 				90F67B451D21038600469186 /* MASViewConstraint.m in Sources */,
 				9010454A1D66AFBE004FD5E8 /* ThrowLineTool.m in Sources */,
 				904105811D58239800FC9A49 /* Viewcontroller10.m in Sources */,
@@ -976,11 +1040,13 @@
 				9068F8531D52D18000F7D2D0 /* PCLockLabel.m in Sources */,
 				90F67B481D21038600469186 /* View+MASAdditions.m in Sources */,
 				9068F8501D52D18000F7D2D0 /* PCCircleViewConst.m in Sources */,
+				90E771C81D98F3D9001060C8 /* SViewControllerDemo2.m in Sources */,
 				90F67B471D21038600469186 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				901044F31D63F807004FD5E8 /* UIAlertView+Blocks.m in Sources */,
 				902A90B81D827E0500EAAF05 /* ThirdController.m in Sources */,
 				90F67B431D21038600469186 /* MASLayoutConstraint.m in Sources */,
 				90F67B421D21038600469186 /* MASConstraintMaker.m in Sources */,
+				905DE7B11D8FB8C200492F04 /* LeftViewController.m in Sources */,
 				903FDDD81D506EA100FD6072 /* ViewController8.m in Sources */,
 				905FE1301CEE9BEA00161E45 /* ViewController3.m in Sources */,
 				9010454D1D66D7BD004FD5E8 /* CaptchaView.m in Sources */,
@@ -1156,6 +1222,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
@@ -1173,6 +1240,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
@@ -1283,6 +1351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";

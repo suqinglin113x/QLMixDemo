@@ -63,7 +63,7 @@
     
     [self.view addGestureRecognizer:pan];
     
-    backView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, 64, 375, 667)];
+    backView = [[UIView alloc] initWithFrame:CGRectMake(-self.view.frame.size.width, 64, 375, 667)];
     backView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:backView];
     
@@ -71,22 +71,26 @@
 - (void)panIt:(UIPanGestureRecognizer *)pan
 {
     CGPoint point = [pan translationInView:self.view];
-        if (point.x < 0) {
-            
-            NSLog(@"%f",point.x);
-            CGFloat tempPointX = 375;
-            tempPointX += point.x;
-            backView.frame = CGRectMake(KScreenSize.width + point.x, 64, 375, 667);
+    QLLog(@"%@",NSStringFromCGPoint(point));
+    
+    BOOL needMoveWithTap = YES;
+    CGFloat px = self.view.frame.origin.x;
+    if (px < 0) {
+        needMoveWithTap = NO;
+    }
+    
+    if (needMoveWithTap && (pan.view.frame.origin.x >= 0) && (pan.view.frame.origin.x <= 300)) {
+        CGFloat rectcenterX = pan.view.center.x + point.x * 0.5;
+        if (rectcenterX <= KScreenSize.width * 0.5 - 2) {
+            rectcenterX = KScreenSize.width / 2 - 2;
         }
-        else
-        {
-            
-            backView.frame = CGRectMake(self.view.frame.size.width + point.x , 64, 200, 400);
-            
-        }
-    if (pan.state == UIGestureRecognizerStateEnded)
-    {
-        lastPoint = point;
+        CGFloat rectcenterY = pan.view.center.y;
+        pan.view.center = CGPointMake(rectcenterX, rectcenterY);
+        
+        CGFloat scale = 1 - (1 - 0.8) * (pan.view.frame.origin.x / (300));
+        pan.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
+        [pan setTranslation:CGPointMake(0, 0) inView:self.view];
+        
     }
 }
 

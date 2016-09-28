@@ -7,19 +7,27 @@
 //
 
 #import "AppDelegate.h"
-#import "SDImageCache.h"
-#import "UIImageView+WebCache.h"
-#import <Twitter/Twitter.h>
+
+//ios10  推送
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 //开屏广告
 #import "SplashScreenDataManager.h"
 #import "SplashScreenView.h"
 
+//左右侧滑
+#import "SWRevealViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
+
+
 #import "ViewController.h"
 #import "SecondController.h"
 #import "ThirdController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate> //代理
 
 @end
 
@@ -32,16 +40,46 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+//     //ios10 前
+//    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+//        
+//        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+//        
+//        [application registerUserNotificationSettings:settings];
+//    }
     
-    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+    
+    //ios10 推送
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+        //iOS10特有
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        // 必须写代理，不然无法监听通知的接收与点击
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (granted) {
+                // 点击允许
+                NSLog(@"注册成功");
+                [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+                    NSLog(@"%@", settings);
+                }];
+            } else {
+                // 点击不允许
+                NSLog(@"注册失败");
+            }
+        }];
+    }else if ([[UIDevice currentDevice].systemVersion floatValue] >8.0){
+        //iOS8 - iOS10
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
         
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
-        
-        [application registerUserNotificationSettings:settings];
+    }else if ([[UIDevice currentDevice].systemVersion floatValue] < 8.0) {
+        //iOS8系统以下
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
     }
+    // 注册获得device Token
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     
-    
+    // 加载tabbar
     [self initTabBar];
     
     //开屏广告
@@ -55,6 +93,7 @@
 
 -(void)initTabBar
 {
+    
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     nav1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主页" image:nil tag:10001];
     
@@ -67,11 +106,21 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = @[nav2, nav1, nav3];
     
+    
+    
     self.window.rootViewController = tabBarController;
     
 }
 
-- (void)loadAd
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler { //应用在前台收到通知 NSLog(@"========%@", notification);
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    //点击通知进入应用 NSLog(@"response:%@", response);
+}
+    
+    - (void)loadAd
 {
     //     启动页停留1秒
     [NSThread sleepForTimeInterval:1];
@@ -94,7 +143,7 @@
 }
 
 -(void)addLocalNotification{
-    //注册通知 iOS8之后
+    //注册通知 iOS8 ~ iOS10
     
     //定义本地通知对象
     UILocalNotification *notification = [[UILocalNotification alloc]init];

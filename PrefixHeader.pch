@@ -16,6 +16,9 @@
 #import "MBProgressHUD+ShowMessage.h"
 #import "UIImage+Category.h"
 
+
+#import "SDImageCache.h"
+#import <Twitter/Twitter.h>
 /***           view           ***/
 
 #import "view1.h"
@@ -31,7 +34,10 @@
 # define SYLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #ifdef DEBUG
 
-#define QLLog(...) NSLog(__VA_ARGS__)
+//#define QLLog(...) NSLog(__VA_ARGS__)
+
+//ios 10 之后
+#define QLLog(...) printf("%s\n",[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
 
 #else
 

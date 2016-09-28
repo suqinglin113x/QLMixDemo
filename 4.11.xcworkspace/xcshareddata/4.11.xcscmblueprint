@@ -1,15 +1,18 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BF26460E0B77BB5F0BF6B2FF9F6FFBCC6BCB660E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351" : 0
+    "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351" : 0,
+    "BF26460E0B77BB5F0BF6B2FF9F6FFBCC6BCB660E" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "29638F1A-A9A5-4B74-807C-695514BF3F2D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351" : "4.11\/4.11\/Masonry\/"
+    "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351" : "4.11\/4.11\/Masonry\/",
+    "BF26460E0B77BB5F0BF6B2FF9F6FFBCC6BCB660E" : "4.11\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "4.11",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/svn.thfund.com.cn\/bigtree",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6a811e6a-4c7b-11e5-b9a7-b959de6998d3++3351"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suqinglin113x\/QLMixDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF26460E0B77BB5F0BF6B2FF9F6FFBCC6BCB660E"
     }
   ]
 }

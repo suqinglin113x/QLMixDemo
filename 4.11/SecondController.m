@@ -9,6 +9,9 @@
 #import "SecondController.h"
 #import "ADViewController.h"
 #import "SEViewController1.h"
+#import "SViewController2demo1.h"
+#import "SViewControllerDemo2.h"
+
 
 @implementation SecondController
 
@@ -26,14 +29,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAdVC:) name:@"tapAction" object:nil];
     
     [self createUI];
+    
+    
 }
 
 
 - (void)createUI
 {
     UIButton *tableViewBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    CGRect rect = [QLCommonMethod calculateStrRect:@"点我到TableView"];
-    
     tableViewBtn.frame = CGRectMake(10, 70, 150, 30);
     tableViewBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
     tableViewBtn.layer.cornerRadius = 4.f;
@@ -42,6 +45,25 @@
     [tableViewBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [tableViewBtn addTarget:self action:@selector(toTableView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:tableViewBtn];
+    
+    UIButton *collectionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    collectionBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
+    collectionBtn.layer.cornerRadius = 4.f;
+    collectionBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
+    collectionBtn.frame = CGRectMake(10, 110, 150, 30);
+    [collectionBtn setTitle:@"点我到Collection" forState:UIControlStateNormal];
+    [collectionBtn addTarget:self action:@selector(toCollection) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:collectionBtn];
+    
+    UIButton *fallBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    fallBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
+    fallBtn.layer.cornerRadius = 4.f;
+    fallBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
+    fallBtn.frame = CGRectMake(10, 150, 150, 30);
+    [fallBtn setTitle:@"点我到瀑布流" forState:UIControlStateNormal];
+    [fallBtn addTarget:self action:@selector(toFall) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:fallBtn];
+    
 }
 
 /**
@@ -56,7 +78,25 @@
     self.navigationItem.backBarButtonItem = backButton;
     [self.navigationController pushViewController:seVc1 animated:YES];
 }
+/**
+ *  到collection页面
+ */
+- (void)toCollection
+{
+    SViewController2demo1 *svcDemo1 = [[SViewController2demo1 alloc] init];
+    [self.navigationController pushViewController:svcDemo1 animated:YES];
+}
 
+/**
+ *  到瀑布流页面
+ */
+- (void)toFall
+{
+    SViewControllerDemo2 *demo2 = [[SViewControllerDemo2 alloc] init];
+    demo2.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:demo2 animated:YES];
+    
+}
 - (void)pushToAdVC:(NSNotification *)noti
 {
     
@@ -65,4 +105,6 @@
     adVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:adVc animated:YES];
 }
+
+
 @end
