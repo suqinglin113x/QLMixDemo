@@ -48,7 +48,7 @@
 }
 - (void)setImageWithName:(NSString *)imageName content:(NSString *)content
 {
-    _imageShow.image = [UIImage imageNamed:imageName];
+//    _imageShow.image = [UIImage imageNamed:imageName];
     _labelShow.text = content;
 }
 

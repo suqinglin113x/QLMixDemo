@@ -119,15 +119,26 @@
 - (void)createBtn
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setFrame:CGRectMake(0, 70, 375, 50)];
-    [self.view addSubview:btn];
+    btn.layer.cornerRadius = 10;
+    [btn setFrame:CGRectMake(0, 70, KScreenSize.width, 50)];
     btn.backgroundColor = [UIColor grayColor];
     [btn setTitle:@"点我" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(clickMe) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
     [self.view bringSubviewToFront:btn];
     
+    UILabel *label = [[UILabel alloc] init];
+    label.layer.cornerRadius = 10;
+    label.clipsToBounds = YES; //(iOS7以后需要设置，按钮貌似不需要设置）
+    label.frame = CGRectMake(KScreenSize.width - 150, 130, 140, 50);
+    label.backgroundColor = [UIColor colorWithDisplayP3Red:0.7 green:0.3 blue:0.5 alpha:1.0]; //iOS10 新颜色api
+    label.font = [UIFont systemFontOfSize:16];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.adjustsFontSizeToFitWidth = YES; //根据frame自动调整文字的font大小
+    label.text = NSLocalizedString(@"我是国际化语言", nil); //国际化语言适配 （见：Localizable.strings 文件）
+    [self.view addSubview:label];
 }
 /**
  *  按钮action

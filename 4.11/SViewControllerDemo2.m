@@ -10,7 +10,7 @@
 #import "QLFlowLayout.h"
 #import "FallWaterCell.h"
 
-@interface SViewControllerDemo2 ()<UICollectionViewDelegate,UICollectionViewDataSource,QLFlowLayoutDelagate>
+@interface SViewControllerDemo2 ()<UICollectionViewDelegate,UICollectionViewDataSource,QLFlowLayoutDelagate,UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
 
@@ -29,7 +29,7 @@
     
     [self initData];
     [self initView];
-    
+
 }
 
 - (void)initData
@@ -77,24 +77,6 @@
     return cell;
 }
 
-#pragma mark flowLayout 代理
-//- (CGFloat) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-//{
-//    return 5;
-//}
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-//{
-//    return 5;
-//}
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-//{
-//    return UIEdgeInsetsMake(5, 5, 5, 5);
-//}
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    CGFloat height = [[heightArr objectAtIndex:indexPath.row] floatValue];
-//    return CGSizeMake(100, height);
-//}
 
 #pragma mark - <QLFlowLayoutDelagate>
 /**
@@ -106,5 +88,9 @@
     return [heightArr[index] doubleValue];
 }
 
+//- (UIEdgeInsets)edgInsetsOfWaterFallLayout:(QLFlowLayout *)layout
+//{
+//    return UIEdgeInsetsMake(0, 30, 30, 10);
+//}
 @end
 

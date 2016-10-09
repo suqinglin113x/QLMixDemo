@@ -32,7 +32,7 @@
     flowLayout.itemSize = CGSizeMake(KScreenSize.width/2-10, KScreenSize.width/2-10);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     flowLayout.minimumLineSpacing = 10;
-                                                                                                                                                                                                                                                 
+     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;

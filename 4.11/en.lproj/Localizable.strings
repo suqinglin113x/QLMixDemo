@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  4.11
+
+  Created by SU on 16/10/9.
+  Copyright © 2016年 SU. All rights reserved.
+*/
+
+//如果是中文 翻译成英文
+"吃饭" = "eating";
+
+"我是国际化语言" = "im international laguage";

@@ -110,14 +110,14 @@
     
     NSComparisonResult result;
     result = [deadLineDate compare:currentDate];
-    if (result == NSOrderedAscending) {
+    if (result != NSOrderedAscending) {//图片有效期内显示，过期隐藏，为了一直显示，暂时不作处理
         [self dismiss];
     }
     else{
         [self startTimer];
         
         UIWindow *window = [[UIApplication sharedApplication].delegate window];
-//        window.hidden = NO;
+        window.hidden = NO;
         [window addSubview:self];
     }
 }

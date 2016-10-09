@@ -45,6 +45,9 @@
     [tableViewBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [tableViewBtn addTarget:self action:@selector(toTableView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:tableViewBtn];
+    QLLog(@"%@",tableViewBtn.currentTitle); //输出按钮文字 two ways
+    QLLog(@"%@",tableViewBtn.titleLabel.text);
+    
     
     UIButton *collectionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     collectionBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
@@ -83,8 +86,9 @@
  */
 - (void)toCollection
 {
-    SViewController2demo1 *svcDemo1 = [[SViewController2demo1 alloc] init];
-    [self.navigationController pushViewController:svcDemo1 animated:YES];
+    SViewController2demo1 *demo1 = [[SViewController2demo1 alloc] init];
+//    demo1.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:demo1 animated:YES];
 }
 
 /**

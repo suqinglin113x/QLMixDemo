@@ -94,13 +94,22 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
 {
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    //开始计算item的x, y,width, height
+    //开始计算item的 x, y, width, height
     CGFloat collectionWidth = self.collectionView.frame.size.width;
-    CGFloat width = (collectionWidth - [self edgeInsets].left - [self edgeInsets].right - ([self columnCount] -1) *[self columnMargin]) / [self columnCount];
-    
-    //计算当前item应该放在哪一列
-    __block NSUInteger minColumn = 0; //默认是第 0 列
+
+    __block NSUInteger minColumn = 0; //默认最短列为第0列
     __block CGFloat minHeight = MAXFLOAT;
+    
+    CGFloat width = (collectionWidth - [self edgeInsets].left - [self edgeInsets].right - ([self columnCount] -1) *[self columnMargin]) / [self columnCount];
+    CGFloat height = [self.delagate waterFallLayout:self heightForItemAtIndex:indexPath.item width:width];
+    CGFloat x = [self edgeInsets].left + minColumn * ([self columnMargin] + width);
+    CGFloat y = minHeight + [self rowMargin];
+    
+    attrs.frame = CGRectMake(x, y, width, height);
+    
+    self.height = height;
+   
+    //计算当前item应该放在哪一列
     [self.columnHeights enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { //遍历找出最小高度的列
         CGFloat height = [obj doubleValue];
         if (minHeight > height) {
@@ -108,15 +117,8 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
             minColumn = idx;
         }
     }];
-    
-    CGFloat x = [self edgeInsets].left + minColumn * ([self columnMargin] + width);
-    CGFloat y = minHeight + [self rowMargin];
-    
-    CGFloat height = [self.delagate waterFallLayout:self heightForItemAtIndex:indexPath.item width:width];
-    attrs.frame = CGRectMake(x, y, width, height);
-    _height = height;
     //更新数组中的最短列高度
-    self.columnHeights[minColumn] = @(y + height);
+    _columnHeights[minColumn] = @(y + height);
     
     return attrs;
 }
@@ -126,10 +128,21 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
  */
 - (CGSize)collectionViewContentSize
 {
-    NSLog(@"%f",self.maxY);
+//    NSLog(@"%f",self.maxY);
     return CGSizeMake(0, self.maxY + [self edgeInsets].bottom);
 }
 
+//得到最大列的高度
+- (CGFloat)maxYWithColumnmHeightsArray:(NSArray *)array
+{
+    __block CGFloat maxY = 0;
+    [_columnHeights enumerateObjectsUsingBlock:^(NSNumber  *_Nonnull heightNumber, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([heightNumber doubleValue] > maxY) {
+            maxY = [heightNumber doubleValue];
+        }
+    }];
+    return maxY;
+}
 #pragma mark - 私有方法
 /**
  *  因为返回代理方法调用的频率非常频繁，所以prepareLayout的时候设置一次标示，调用代理方法的时候就直接判断即可，可提高效率
@@ -142,16 +155,7 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
     _delegateFlags.didRespondColumnMArgin = [self.delagate respondsToSelector:@selector(columnMarginOfWaterFallLayout:)];
 }
 
-- (CGFloat)maxYWithColumnmHeightsArray:(NSArray *)array
-{
-    __block CGFloat maxY = 0;
-    [_columnHeights enumerateObjectsUsingBlock:^(NSNumber  *_Nonnull heightNumber, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([heightNumber doubleValue] > maxY) {
-            maxY = [heightNumber doubleValue];
-        }
-    }];
-    return maxY;
-}
+
 
 - (void)setupColumnHeightsArray
 {
@@ -160,6 +164,7 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
     
     // 初始化列高度
     for (int i = 0; i < [self columnCount]; i++) {
+        QLLog(@"%f",[self edgeInsets].top);
         [self.columnHeights addObject:@([self edgeInsets].top)];
     }
 }
@@ -200,6 +205,16 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
 
 - (UIEdgeInsets)edgeInsets
 {
-    return _delegateFlags.didRespondEdgeInsets ? [self.delagate edgInsetsOfWaterFallLayout:self] : QLDefaultEdgeInsets;
+
+    UIEdgeInsets edginsets = UIEdgeInsetsZero;
+    if (_delegateFlags.didRespondEdgeInsets) {
+       edginsets = [self.delagate edgInsetsOfWaterFallLayout:self];
+    }else
+    {
+       edginsets = QLDefaultEdgeInsets;
+    }
+    return edginsets;
 }
+
+
 @end
