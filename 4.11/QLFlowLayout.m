@@ -83,7 +83,7 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
  */
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    return self.attrsArray;
+    return _attrsArray;
 }
 
 /**
@@ -96,19 +96,10 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
     
     //开始计算item的 x, y, width, height
     CGFloat collectionWidth = self.collectionView.frame.size.width;
-
+    CGFloat width = (collectionWidth - [self edgeInsets].left - [self edgeInsets].right - ([self columnCount] -1) *[self columnMargin]) / [self columnCount];
     __block NSUInteger minColumn = 0; //默认最短列为第0列
     __block CGFloat minHeight = MAXFLOAT;
     
-    CGFloat width = (collectionWidth - [self edgeInsets].left - [self edgeInsets].right - ([self columnCount] -1) *[self columnMargin]) / [self columnCount];
-    CGFloat height = [self.delagate waterFallLayout:self heightForItemAtIndex:indexPath.item width:width];
-    CGFloat x = [self edgeInsets].left + minColumn * ([self columnMargin] + width);
-    CGFloat y = minHeight + [self rowMargin];
-    
-    attrs.frame = CGRectMake(x, y, width, height);
-    
-    self.height = height;
-   
     //计算当前item应该放在哪一列
     [self.columnHeights enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { //遍历找出最小高度的列
         CGFloat height = [obj doubleValue];
@@ -117,8 +108,18 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
             minColumn = idx;
         }
     }];
+    
+    CGFloat height = [self.delagate waterFallLayout:self heightForItemAtIndex:indexPath.item width:width];
+    CGFloat x = [self edgeInsets].left + minColumn * ([self columnMargin] + width);
+    CGFloat y = minHeight + [self rowMargin];
+    
+    attrs.frame = CGRectMake(x, y, width, height);
+    
+    self.height = height;
+   
+   
     //更新数组中的最短列高度
-    _columnHeights[minColumn] = @(y + height);
+    self.columnHeights[minColumn] = @(y + height);
     
     return attrs;
 }
@@ -139,6 +140,7 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
     [_columnHeights enumerateObjectsUsingBlock:^(NSNumber  *_Nonnull heightNumber, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([heightNumber doubleValue] > maxY) {
             maxY = [heightNumber doubleValue];
+            QLLog(@"%f",maxY);
         }
     }];
     return maxY;
@@ -164,7 +166,6 @@ static const UIEdgeInsets QLDefaultEdgeInsets = {10, 10, 10, 10}; //
     
     // 初始化列高度
     for (int i = 0; i < [self columnCount]; i++) {
-        QLLog(@"%f",[self edgeInsets].top);
         [self.columnHeights addObject:@([self edgeInsets].top)];
     }
 }
