@@ -8,18 +8,30 @@
 
 #import "SecondController.h"
 #import "ADViewController.h"
-#import "SEViewController1.h"
-#import "SViewController2demo1.h"
-#import "SViewControllerDemo2.h"
+#import "SEViewController1.h" //Collection
+#import "SViewController2demo1.h" //
+#import "SViewControllerDemo2.h"//瀑布流
+#import "QLDownloadFileController.h"
 
+
+#import "QLTextField.h"
+
+@interface SecondController ()<UISearchBarDelegate>
+
+@end
 
 @implementation SecondController
 
-
-
-
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    //修改占位符位置 待fix
+    searchBar.searchFieldBackgroundPositionAdjustment = UIOffsetMake(0, 0);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     
     self.navigationItem.title = self.title = @"发现";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -36,36 +48,24 @@
 
 - (void)createUI
 {
-    UIButton *tableViewBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    tableViewBtn.frame = CGRectMake(10, 70, 150, 30);
-    tableViewBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
-    tableViewBtn.layer.cornerRadius = 4.f;
-    [tableViewBtn setTitle:@"点我到TableView" forState:UIControlStateNormal];
-    tableViewBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
-    [tableViewBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [tableViewBtn addTarget:self action:@selector(toTableView) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *tableViewBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 70, 150, 30) title:@"点我到TableView" target:self sel:@selector(toTableView)];
     [self.view addSubview:tableViewBtn];
     QLLog(@"%@",tableViewBtn.currentTitle); //输出按钮文字 two ways
     QLLog(@"%@",tableViewBtn.titleLabel.text);
     
-    
-    UIButton *collectionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    collectionBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
-    collectionBtn.layer.cornerRadius = 4.f;
-    collectionBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
-    collectionBtn.frame = CGRectMake(10, 110, 150, 30);
-    [collectionBtn setTitle:@"点我到Collection" forState:UIControlStateNormal];
-    [collectionBtn addTarget:self action:@selector(toCollection) forControlEvents:UIControlEventTouchUpInside];
+   
+    UIButton *collectionBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 110, 150, 30) title:@"点我到Collection" target:self sel:@selector(toCollection)];
     [self.view addSubview:collectionBtn];
     
-    UIButton *fallBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    fallBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
-    fallBtn.layer.cornerRadius = 4.f;
-    fallBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
-    fallBtn.frame = CGRectMake(10, 150, 150, 30);
-    [fallBtn setTitle:@"点我到瀑布流" forState:UIControlStateNormal];
-    [fallBtn addTarget:self action:@selector(toFall) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *fallBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 150, 150, 30)title:@"点我到瀑布流" target:self sel:@selector(toFall)];
     [self.view addSubview:fallBtn];
+    
+    
+    UIButton *downloadBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 190, 150, 30) title:@"点我到下载" target:self sel:@selector(toDownloadFile)];
+    [self.view addSubview:downloadBtn];
+
     
 }
 
@@ -101,6 +101,20 @@
     [self.navigationController pushViewController:demo2 animated:YES];
     
 }
+
+/**
+ * 到文件下载
+ */
+- (void)toDownloadFile
+{
+    QLDownloadFileController *downloadVC = [[QLDownloadFileController alloc] init];
+    [downloadVC setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:downloadVC animated:YES];
+}
+
+/**
+ * 到广告页面
+ */
 - (void)pushToAdVC:(NSNotification *)noti
 {
     

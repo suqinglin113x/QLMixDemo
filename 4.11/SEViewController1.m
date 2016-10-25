@@ -8,7 +8,7 @@
 
 #import "SEViewController1.h"
 
-@interface SEViewController1 ()<UITableViewDataSource,UITableViewDelegate>
+@interface SEViewController1 ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)NSMutableArray *dataSourceArray;
@@ -31,10 +31,53 @@
 //    self.navigationController.navigationBar.hidden = YES;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    _dataSourceArray = [NSMutableArray arrayWithObjects:@"谁念西风独自凉,萧萧黄叶闭疏窗,沉思往事立残阳",@"被酒莫惊春睡重,赌书消得泼茶香,当时只道是寻常",@"等闲变却故人心,却道故人心易变",@"谁念西风独自凉,萧萧黄叶闭疏窗,沉思往事立残阳",@"被酒莫惊春睡重,赌书消得泼茶香,当时只道是寻常",@"等闲变却故人心,却道故人心易变",nil];
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 10, 100, 30)];
+    searchBar.placeholder = @"试试事实上";
+    self.navigationItem.titleView = searchBar;
+    searchBar.delegate = self;
+//    searchBar.searchFieldBackgroundPositionAdjustment = UIOffsetMake(-100, 1);
+//        searchBar.searchTextPositionAdjustment = UIOffsetMake(100, 0);
+    searchBar.barStyle = UIBarStyleDefault;
+    searchBar.tintColor = [UIColor orangeColor];
+    
+    //修改searchbar文字属性、光标
+    for (UIView *view in searchBar.subviews){
+        QLLog(@"%@", view.subviews);
+        for (id subview in view.subviews){
+            if ( [subview isKindOfClass:[UITextField class]] ){
+                
+                //文字大小
+                [(UITextField *)subview setFont:[UIFont systemFontOfSize:20]];
+                
+                //placeholder颜色
+                NSAttributedString *attri = [[NSAttributedString alloc] initWithString:searchBar.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor purpleColor], NSFontAttributeName: [UIFont systemFontOfSize:13]}];
+                [(UITextField *)subview setAttributedPlaceholder:attri];
+                
+                //修改文本框文字内容颜色
+                [(UITextField *)subview setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]}];
+                
+                break;
+            }
+        }
+    }
+
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:nil];
+    rightItem.tintColor = [UIColor blackColor];
+    [rightItem setTitleTextAttributes:@{
+                                        NSForegroundColorAttributeName:[UIColor blackColor],
+                                        NSFontAttributeName:[UIFont systemFontOfSize:20]} forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
 }
 
+- (NSMutableArray *)dataSourceArray
+{
+    if (!_dataSourceArray) {
+        _dataSourceArray = [NSMutableArray arrayWithObjects:@"谁念西风独自凉,萧萧黄叶闭疏窗,沉思往事立残阳",@"被酒莫惊春睡重,赌书消得泼茶香,当时只道是寻常",@"等闲变却故人心,却道故人心易变",@"谁念西风独自凉,萧萧黄叶闭疏窗,沉思往事立残阳",@"被酒莫惊春睡重,赌书消得泼茶香,当时只道是寻常",@"等闲变却故人心,却道故人心易变",nil];
+    }
+    return _dataSourceArray;
+}
 - (void)loadView
 {
     [super loadView];
@@ -63,7 +106,7 @@
     
     _photoImageView.layer.cornerRadius = 31;
     _photoImageView.layer.masksToBounds = YES;
-    _photoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    _photoImageView.contentMode = UIViewContentModeScaleAspectFill;
     _photoImageView.autoresizesSubviews = YES;
     
     _photoImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -106,7 +149,7 @@
 #pragma mark 代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataSourceArray.count;
+    return self.dataSourceArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -123,6 +166,8 @@
     cell.textLabel.text = _dataSourceArray[indexPath.row];
     return cell;
 }
+
+//编辑每行
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //设置删除按钮

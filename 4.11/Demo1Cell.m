@@ -27,6 +27,7 @@
         _imageShow = imageShow;
         _imageShow.layer.masksToBounds = YES;//图片没这句话它圆不起来
         _imageShow.layer.cornerRadius = 15;
+       
         UILabel *labelShow = [[UILabel alloc] initWithFrame:CGRectZero];
         labelShow.font = [UIFont systemFontOfSize:15];
         labelShow.textAlignment = NSTextAlignmentCenter;
@@ -48,7 +49,7 @@
 }
 - (void)setImageWithName:(NSString *)imageName content:(NSString *)content
 {
-//    _imageShow.image = [UIImage imageNamed:imageName];
+    _imageShow.image = [UIImage imageNamed:imageName];
     _labelShow.text = content;
 }
 

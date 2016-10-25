@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+static NSString const * teststr = @"dddd";
 @interface Demo1Cell : UICollectionViewCell
 
 - (void)setImageWithName:(NSString *)imageName content:(NSString *)content;

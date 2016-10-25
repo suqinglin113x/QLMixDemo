@@ -67,13 +67,20 @@
 		90B394B71CCA1A3600E85AFE /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B394B61CCA1A3600E85AFE /* ViewController2.m */; };
 		90BE2E041CBE37C000F90BE2 /* CTPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BE2E031CBE37C000F90BE2 /* CTPropertyViewController.m */; };
 		90C7FECB1D2DE22800E7FAF6 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C7FECA1D2DE22800E7FAF6 /* TestModel1.m */; };
+		90D7AA4D1DAF3170005C6897 /* QLSlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D7AA4C1DAF3170005C6897 /* QLSlideSwitchView.m */; };
+		90D7AA521DAF51C2005C6897 /* icon_rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D7AA4F1DAF51C2005C6897 /* icon_rightarrow.png */; };
+		90D7AA531DAF51C2005C6897 /* icon_rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D7AA501DAF51C2005C6897 /* icon_rightarrow@2x.png */; };
+		90D7AA541DAF51C2005C6897 /* red_line_and_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D7AA511DAF51C2005C6897 /* red_line_and_shadow@2x.png */; };
 		90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90DCC1E51DAA29C700EE02CF /* Localizable.strings */; };
 		90E771C81D98F3D9001060C8 /* SViewControllerDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */; };
 		90E771CB1D98FBE2001060C8 /* QLFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771CA1D98FBE2001060C8 /* QLFlowLayout.m */; };
 		90E771CE1D98FD65001060C8 /* FallWaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E771CD1D98FD65001060C8 /* FallWaterCell.m */; };
 		90E80B511D8799AE00B12F2F /* SEViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80B501D8799AE00B12F2F /* SEViewController1.m */; };
 		90E80B5E1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80B5D1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m */; };
+		90E80CD51DBF20F700CC5E02 /* QLViewCreateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80CD41DBF20F700CC5E02 /* QLViewCreateTool.m */; };
+		90E80CD81DBF271100CC5E02 /* QLDownloadFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E80CD71DBF271100CC5E02 /* QLDownloadFileController.m */; };
 		90ECF9341D864CEA006605F2 /* ADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ECF9331D864CEA006605F2 /* ADViewController.m */; };
+		90F18A061DB758CB0079F38B /* QLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F18A051DB758CB0079F38B /* QLTextField.m */; };
 		90F67B201D20F1A700469186 /* ViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F67B1F1D20F1A700469186 /* ViewController5.m */; };
 		90F67B231D20FDB600469186 /* ViewController6.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F67B221D20FDB600469186 /* ViewController6.m */; };
 		90F67B3F1D21038600469186 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90F67B271D21038600469186 /* Info.plist */; };
@@ -241,6 +248,11 @@
 		90BE2E021CBE37C000F90BE2 /* CTPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPropertyViewController.h; sourceTree = "<group>"; };
 		90BE2E031CBE37C000F90BE2 /* CTPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPropertyViewController.m; sourceTree = "<group>"; };
 		90C7FECA1D2DE22800E7FAF6 /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
+		90D7AA4B1DAF3170005C6897 /* QLSlideSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSlideSwitchView.h; sourceTree = "<group>"; };
+		90D7AA4C1DAF3170005C6897 /* QLSlideSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSlideSwitchView.m; sourceTree = "<group>"; };
+		90D7AA4F1DAF51C2005C6897 /* icon_rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rightarrow.png; sourceTree = "<group>"; };
+		90D7AA501DAF51C2005C6897 /* icon_rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_rightarrow@2x.png"; sourceTree = "<group>"; };
+		90D7AA511DAF51C2005C6897 /* red_line_and_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_line_and_shadow@2x.png"; sourceTree = "<group>"; };
 		90DCC1E41DAA29C700EE02CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90DCC1E61DAA29E100EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		90DCC1E71DAA29E100EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -257,8 +269,14 @@
 		90E80B501D8799AE00B12F2F /* SEViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEViewController1.m; sourceTree = "<group>"; };
 		90E80B5C1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ShowMessage.h"; sourceTree = "<group>"; };
 		90E80B5D1D87DC9A00B12F2F /* MBProgressHUD+ShowMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ShowMessage.m"; sourceTree = "<group>"; };
+		90E80CD31DBF20F700CC5E02 /* QLViewCreateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLViewCreateTool.h; sourceTree = "<group>"; };
+		90E80CD41DBF20F700CC5E02 /* QLViewCreateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLViewCreateTool.m; sourceTree = "<group>"; };
+		90E80CD61DBF271100CC5E02 /* QLDownloadFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLDownloadFileController.h; sourceTree = "<group>"; };
+		90E80CD71DBF271100CC5E02 /* QLDownloadFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLDownloadFileController.m; sourceTree = "<group>"; };
 		90ECF9321D864CEA006605F2 /* ADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADViewController.h; sourceTree = "<group>"; };
 		90ECF9331D864CEA006605F2 /* ADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADViewController.m; sourceTree = "<group>"; };
+		90F18A041DB758CB0079F38B /* QLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLTextField.h; sourceTree = "<group>"; };
+		90F18A051DB758CB0079F38B /* QLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLTextField.m; sourceTree = "<group>"; };
 		90F67B1E1D20F1A700469186 /* ViewController5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController5.h; path = ../ViewController5.h; sourceTree = "<group>"; };
 		90F67B1F1D20F1A700469186 /* ViewController5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController5.m; path = ../ViewController5.m; sourceTree = "<group>"; };
 		90F67B211D20FDB600469186 /* ViewController6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController6.h; sourceTree = "<group>"; };
@@ -452,6 +470,8 @@
 				905DE7B31D8FD09A00492F04 /* SViewController2demo1.m */,
 				90E771C61D98F3D9001060C8 /* SViewControllerDemo2.h */,
 				90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */,
+				90E80CD61DBF271100CC5E02 /* QLDownloadFileController.h */,
+				90E80CD71DBF271100CC5E02 /* QLDownloadFileController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -657,6 +677,7 @@
 				901044F01D63F7AA004FD5E8 /* FirstViewcontrollers */,
 				902A90B11D827D9500EAAF05 /* SecondControllers */,
 				902A90B21D827DAE00EAAF05 /* Thirdcontrollers */,
+				90F18A071DB75A990079F38B /* Tools */,
 				902C28DC1D4AFC4E0050F6C0 /* Extentions */,
 				907126E61D4885D900333E6D /* ImageSource */,
 				90F67B251D21035E00469186 /* Utils */,
@@ -699,6 +720,26 @@
 			path = 4.11UITests;
 			sourceTree = "<group>";
 		};
+		90D7AA4A1DAF315C005C6897 /* SlideSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				90D7AA4B1DAF3170005C6897 /* QLSlideSwitchView.h */,
+				90D7AA4C1DAF3170005C6897 /* QLSlideSwitchView.m */,
+				90D7AA4E1DAF51C2005C6897 /* resources */,
+			);
+			path = SlideSwitch;
+			sourceTree = "<group>";
+		};
+		90D7AA4E1DAF51C2005C6897 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				90D7AA4F1DAF51C2005C6897 /* icon_rightarrow.png */,
+				90D7AA501DAF51C2005C6897 /* icon_rightarrow@2x.png */,
+				90D7AA511DAF51C2005C6897 /* red_line_and_shadow@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		90ECF9381D868E1A006605F2 /* Splash AD */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,9 +777,21 @@
 			name = Viewcontroller;
 			sourceTree = "<group>";
 		};
+		90F18A071DB75A990079F38B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				90F18A041DB758CB0079F38B /* QLTextField.h */,
+				90F18A051DB758CB0079F38B /* QLTextField.m */,
+				90E80CD31DBF20F700CC5E02 /* QLViewCreateTool.h */,
+				90E80CD41DBF20F700CC5E02 /* QLViewCreateTool.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		90F67B251D21035E00469186 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				90D7AA4A1DAF315C005C6897 /* SlideSwitch */,
 				905DE7A81D8FB73000492F04 /* SWRevealViewController */,
 				9068F83E1D52D18000F7D2D0 /* shoushimima */,
 				90F67B261D21038600469186 /* Masonry */,
@@ -933,8 +986,11 @@
 				908A75A81CBB354D00FBF20B /* LaunchScreen.storyboard in Resources */,
 				902C28E81D4B2E340050F6C0 /* scan_3@2x.png in Resources */,
 				90FF34C61D73D37C007D5C61 /* Configuration.plist in Resources */,
+				90D7AA531DAF51C2005C6897 /* icon_rightarrow@2x.png in Resources */,
 				902C28E41D4B2E230050F6C0 /* scan_1@2x.png in Resources */,
+				90D7AA521DAF51C2005C6897 /* icon_rightarrow.png in Resources */,
 				902C28EC1D4B2E3F0050F6C0 /* scan_net@2x.png in Resources */,
+				90D7AA541DAF51C2005C6897 /* red_line_and_shadow@2x.png in Resources */,
 				907126E81D48876000333E6D /* 2.png in Resources */,
 				90FF34C81D73D386007D5C61 /* Configuration.plist in Resources */,
 				90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */,
@@ -1020,13 +1076,16 @@
 				9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */,
 				90E80B511D8799AE00B12F2F /* SEViewController1.m in Sources */,
 				907C8B881CE1E9C90041B709 /* 核心绘图.m in Sources */,
+				90E80CD81DBF271100CC5E02 /* QLDownloadFileController.m in Sources */,
 				905DE7AE1D8FB8B600492F04 /* RightViewController.m in Sources */,
 				908A75A01CBB354D00FBF20B /* ViewController.m in Sources */,
 				90F67B4B1D2350E600469186 /* ViewController7.m in Sources */,
 				902A90B51D827DF600EAAF05 /* SecondController.m in Sources */,
 				90FF34B31D73C7B0007D5C61 /* WKWebViewController.m in Sources */,
+				90D7AA4D1DAF3170005C6897 /* QLSlideSwitchView.m in Sources */,
 				9068F84F1D52D18000F7D2D0 /* PCCircleView.m in Sources */,
 				9068F8521D52D18000F7D2D0 /* PCCircleInfoView.m in Sources */,
+				90F18A061DB758CB0079F38B /* QLTextField.m in Sources */,
 				905DE7B71D8FD72A00492F04 /* Demo1Cell.m in Sources */,
 				905DE7AB1D8FB73000492F04 /* SWRevealViewController.m in Sources */,
 				908A759D1CBB354D00FBF20B /* AppDelegate.m in Sources */,
@@ -1066,6 +1125,7 @@
 				90F67B201D20F1A700469186 /* ViewController5.m in Sources */,
 				9068F8511D52D18000F7D2D0 /* CALayer+Anim.m in Sources */,
 				904C002A1D7E547000570C44 /* NSObject+Property.m in Sources */,
+				90E80CD51DBF20F700CC5E02 /* QLViewCreateTool.m in Sources */,
 				90F67B231D20FDB600469186 /* ViewController6.m in Sources */,
 				90F67B461D21038600469186 /* NSArray+MASAdditions.m in Sources */,
 				90F67B441D21038600469186 /* MASViewAttribute.m in Sources */,

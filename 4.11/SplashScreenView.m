@@ -19,7 +19,9 @@
 @end
 
 @implementation SplashScreenView
-
+- (void)test{
+    
+}
 - (NSTimer *)countTimer
 {
     if (_countTimer == nil) {

@@ -55,16 +55,17 @@
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         // 必须写代理，不然无法监听通知的接收与点击
         center.delegate = self;
+        //授权
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (granted) {
                 // 点击允许
-                NSLog(@"注册成功");
+                QLLog(@"注册成功");
                 [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                    NSLog(@"%@", settings);
+                    QLLog(@"%@", settings);
                 }];
             } else {
                 // 点击不允许
-                NSLog(@"注册失败");
+                QLLog(@"注册失败");
             }
         }];
     }else if ([[UIDevice currentDevice].systemVersion floatValue] >8.0){
@@ -113,19 +114,20 @@
 }
 
 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler { //应用在前台收到通知 NSLog(@"========%@", notification);
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    //应用在前台收到通知 NSLog(@"========%@", notification);
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     //点击通知进入应用 NSLog(@"response:%@", response);
 }
     
-    - (void)loadAd
+- (void)loadAd
 {
     //     启动页停留1秒
     [NSThread sleepForTimeInterval:1];
     
-    NSString *filePath = [SplashScreenDataManager getFilePathWithImageName:[[NSUserDefaults standardUserDefaults]valueForKey: adImageName]];
+    NSString *filePath = [SplashScreenDataManager getFilePathWithImageName:[[NSUserDefaults standardUserDefaults] valueForKey:adImageName]];
     BOOL exist = [SplashScreenDataManager isFileExistWithFilePath:filePath];
     
     if (exist) {

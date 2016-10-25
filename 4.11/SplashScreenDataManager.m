@@ -26,7 +26,7 @@
  */
 + (void)getAdvertisingImageData
 {
-     NSArray *imageArray = @[@"http://img1.126.net/channel6/2016/022471/0805/2.jpg?dpi=6401136", @"http://image.woshipm.com/wp-files/2016/08/555670852352118156.jpg"];
+    NSArray *imageArray = @[@"http://img1.126.net/channel6/2016/022471/0805/2.jpg?dpi=6401136", @"http://image.woshipm.com/wp-files/2016/08/555670852352118156.jpg"];
     NSString *imageUrl = imageArray[0];
     NSString *imageLinkUrl = @"http://www.jianshu.com/users/e4c63b354a77/latest_articles";
     NSString *imageDeadLine = @"09/30/2016 14:25";
@@ -81,7 +81,7 @@
     });
 }
 /**
- *  删除酒图片
+ *  删除旧图片
  */
 + (void)deleteOldImage
 {

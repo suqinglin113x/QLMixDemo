@@ -30,8 +30,11 @@
     //隐藏时从父控件移除
     hud.removeFromSuperViewOnHide = YES;
     
+    //移除方式
+    hud.animationType = MBProgressHUDAnimationZoomIn;
+    
     //一秒后消失
-    [hud hideAnimated:YES afterDelay:1.f];
+    [hud hideAnimated:YES afterDelay:1.3f];
     
 }
 @end

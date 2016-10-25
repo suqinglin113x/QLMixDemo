@@ -23,12 +23,14 @@
 
 #import "view1.h"
 #import "ThrowLineTool.h"
+#import "CALayer+Anim.h"
+#import "QLViewCreateTool.h"
 
 /****           宏定义         ****/
 
 #define KScreenSize [[UIScreen mainScreen] bounds].size
 #define adoptValue(a) ((KScreenSize.width/375.0) * a)
-
+#define defaultColor [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6]
 
 //# define QLLog(fmt,...)  NSLog((@"%s" fmt),__PRETTY_FUNCTION__,##__VA_ARGS__);
 # define SYLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);

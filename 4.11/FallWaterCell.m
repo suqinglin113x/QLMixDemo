@@ -28,6 +28,8 @@
 {
     [super layoutSubviews];
     _imageView.frame = self.contentView.frame;
+    
+    [super layoutIfNeeded];
 }
 
 - (void)setImageName:(NSString *)imageName
