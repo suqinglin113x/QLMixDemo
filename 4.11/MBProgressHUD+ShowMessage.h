@@ -9,5 +9,9 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MBProgressHUD (ShowMessage)
+
 + (void)showMessage:(NSString *)message toView:(UIView *)view;
+
++ (void)showMessage:(NSString *)message;
+
 @end

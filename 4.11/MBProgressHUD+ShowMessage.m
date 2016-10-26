@@ -37,4 +37,9 @@
     [hud hideAnimated:YES afterDelay:1.3f];
     
 }
+
++ (void)showMessage:(NSString *)message
+{
+    [self showMessage:message toView:nil];
+}
 @end
