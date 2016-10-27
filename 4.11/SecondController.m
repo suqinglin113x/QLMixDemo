@@ -12,6 +12,7 @@
 #import "SViewController2demo1.h" //
 #import "SViewControllerDemo2.h"//瀑布流
 #import "QLDownloadFileController.h"
+#import "QLUploadFileController.h"
 
 
 #import "QLTextField.h"
@@ -66,6 +67,8 @@
     UIButton *downloadBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 190, 150, 30) title:@"点我到下载" target:self sel:@selector(toDownloadFile)];
     [self.view addSubview:downloadBtn];
 
+    UIButton *uploadBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 230, 150, 30) title:@"点我到上传" target:self sel:@selector(toUploadFile)];
+    [self.view addSubview:uploadBtn];
     
 }
 
@@ -111,6 +114,17 @@
     [downloadVC setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:downloadVC animated:YES];
 }
+
+/**
+ * 到文件上传
+ */
+- (void)toUploadFile
+{
+    QLUploadFileController *uploadVC = [[QLUploadFileController alloc] init];
+    uploadVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:uploadVC animated:YES];
+}
+
 
 /**
  * 到广告页面

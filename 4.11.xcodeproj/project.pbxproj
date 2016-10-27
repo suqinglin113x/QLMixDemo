@@ -43,6 +43,7 @@
 		905DE7B41D8FD09A00492F04 /* SViewController2demo1.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B31D8FD09A00492F04 /* SViewController2demo1.m */; };
 		905DE7B71D8FD72A00492F04 /* Demo1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B61D8FD72A00492F04 /* Demo1Cell.m */; };
 		905FE1301CEE9BEA00161E45 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 905FE12F1CEE9BEA00161E45 /* ViewController3.m */; };
+		9062B65D1DC190A400EA838D /* QLUploadFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9062B65C1DC190A400EA838D /* QLUploadFileController.m */; };
 		9068F83D1D52D14300F7D2D0 /* ViewController9.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F83C1D52D14300F7D2D0 /* ViewController9.m */; };
 		9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F8411D52D18000F7D2D0 /* PCCircle.m */; };
 		9068F84F1D52D18000F7D2D0 /* PCCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F8431D52D18000F7D2D0 /* PCCircleView.m */; };
@@ -192,6 +193,8 @@
 		905DE7B61D8FD72A00492F04 /* Demo1Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo1Cell.m; sourceTree = "<group>"; };
 		905FE12E1CEE9BEA00161E45 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		905FE12F1CEE9BEA00161E45 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		9062B65B1DC190A400EA838D /* QLUploadFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLUploadFileController.h; sourceTree = "<group>"; };
+		9062B65C1DC190A400EA838D /* QLUploadFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLUploadFileController.m; sourceTree = "<group>"; };
 		9068F83B1D52D14300F7D2D0 /* ViewController9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController9.h; sourceTree = "<group>"; };
 		9068F83C1D52D14300F7D2D0 /* ViewController9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController9.m; sourceTree = "<group>"; };
 		9068F8401D52D18000F7D2D0 /* PCCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircle.h; sourceTree = "<group>"; };
@@ -472,6 +475,8 @@
 				90E771C71D98F3D9001060C8 /* SViewControllerDemo2.m */,
 				90E80CD61DBF271100CC5E02 /* QLDownloadFileController.h */,
 				90E80CD71DBF271100CC5E02 /* QLDownloadFileController.m */,
+				9062B65B1DC190A400EA838D /* QLUploadFileController.h */,
+				9062B65C1DC190A400EA838D /* QLUploadFileController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				905DE7AB1D8FB73000492F04 /* SWRevealViewController.m in Sources */,
 				908A759D1CBB354D00FBF20B /* AppDelegate.m in Sources */,
 				903FDDDB1D51875A00FD6072 /* shadowView.m in Sources */,
+				9062B65D1DC190A400EA838D /* QLUploadFileController.m in Sources */,
 				901C17691D46EEBF0043D93D /* view1.m in Sources */,
 				90B394B71CCA1A3600E85AFE /* ViewController2.m in Sources */,
 				90E771CB1D98FBE2001060C8 /* QLFlowLayout.m in Sources */,
