@@ -12,13 +12,16 @@
 #import "QLAnnotation.h"
 
 
-@interface QLMapLocationController ()<CLLocationManagerDelegate, MKMapViewDelegate>
+@interface QLMapLocationController ()<CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate, UITextFieldDelegate>
 
 //定位管理者
 @property (nonatomic, strong) CLLocationManager *locationManage;
 
 //地图
 @property (nonatomic, strong) MKMapView *mapView;
+
+//当前中心经纬度
+@property (nonatomic) CLLocationCoordinate2D currentCoordinate;
 
 @end
 
@@ -37,7 +40,7 @@
 - (MKMapView *)mapView
 {
     if (!_mapView) {
-        _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(5, 160, KScreenSize.width - 10, KScreenSize.width - 10)];
+        _mapView = [[MKMapView alloc] init];
     }
     return _mapView;
 }
@@ -59,12 +62,22 @@
     coordinateLabel.tag = 100;
     [self.view addSubview:coordinateLabel];
     
-    UILabel *adressLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil];
-    adressLabel.tag = 101;
-    [self.view addSubview:adressLabel];
+    UILabel *addressLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil];
+    addressLabel.tag = 101;
+    [self.view addSubview:addressLabel];
     
+    //重置按钮
     UIButton *resetAddressBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, KScreenSize.height - 45, KScreenSize.width - 20, 44) title:@"重新定位" target:self sel:@selector(resetAddressInfo)];
     [self.view addSubview:resetAddressBtn];
+    
+    //搜索框🔍
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 130, KScreenSize.width - 20, 50)];
+    searchBar.tag = 102;
+    searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    searchBar.barTintColor = [UIColor greenColor];
+    searchBar.placeholder = @"请输入搜索内容";
+    searchBar.delegate = self;
+    [self.view addSubview:searchBar];
     
 }
 
@@ -72,6 +85,7 @@
 {
     //添加地图
     [self.view addSubview:self.mapView];
+    self.mapView.frame = CGRectMake(5, KScreenSize.height - KScreenSize.width - 10 - 45, KScreenSize.width - 10, KScreenSize.width - 10);
     self.mapView.mapType = MKMapTypeStandard;
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     
@@ -126,9 +140,9 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
     CLLocation *location = [locations lastObject];
-    CLLocationCoordinate2D coordinate = location.coordinate;
-    double latitude = coordinate.latitude;
-    double longitude = coordinate.longitude;
+    self.currentCoordinate = location.coordinate;
+    double latitude = _currentCoordinate.latitude;
+    double longitude = _currentCoordinate.longitude;
     QLLog(@"latitude:%f, longitude:%f", latitude, longitude);
     
     UILabel *coordinateLabel = (UILabel *)[self.view viewWithTag:100];
@@ -163,21 +177,26 @@
 {
     //iOS8后不需要进行中心点的指定，默认会将当前位置设置中心点并自动设置显示区域范围
     CLLocationCoordinate2D coordinate = userLocation.location.coordinate;
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.05, 0.05);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02);
     self.mapView.region = MKCoordinateRegionMake(coordinate, span);
 
+    
+}
+
+- (void)searchNeighborPlace:(NSString *)searchText
+{
     //检索请求
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
     //检索范围
-    request.region = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000);
+    request.region = MKCoordinateRegionMakeWithDistance(self.currentCoordinate, 1000, 1000);
     //兴趣点
-    request.naturalLanguageQuery = @"hotal";
+    request.naturalLanguageQuery = searchText;
     
     //初始化检索
     MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
     //开始检索
     [search startWithCompletionHandler:^(MKLocalSearchResponse * _Nullable response, NSError * _Nullable error) {
-       //兴趣点数组
+        //兴趣点数组
         NSArray *array = [NSArray arrayWithArray:response.mapItems];
         for (MKMapItem *item in array) {
             MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
@@ -190,6 +209,19 @@
     }];
 }
 
+#pragma mark ---UISearchBarDelegate---风儿吹吹🍃🍃🍃🍃🍃🍃，雪儿飘飘❄️❄️❄️❄️❄️❄️---
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self searchNeighborPlace:searchBar.text];
+}
 
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    for (UIView *view in (UISearchBar *)[self.view viewWithTag:102].subviews) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            [(UITextField *)view resignFirstResponder];
+        }
+    }
+    return YES;
+}
 @end

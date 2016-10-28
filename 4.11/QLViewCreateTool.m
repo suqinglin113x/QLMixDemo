@@ -7,6 +7,7 @@
 //
 
 #import "QLViewCreateTool.h"
+#import "QLTextField.h"
 
 
 @implementation QLViewCreateTool
@@ -37,4 +38,10 @@
     return label;
 }
 
++ (QLTextField *)createTextFieldWithFrame:(CGRect)frame placeholder:(NSString *)placeholder
+{
+    QLTextField *textfield ;
+    
+    return textfield;
+}
 @end
