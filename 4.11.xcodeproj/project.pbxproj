@@ -12,6 +12,7 @@
 		901044F31D63F807004FD5E8 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 901044F21D63F807004FD5E8 /* UIAlertView+Blocks.m */; };
 		9010454A1D66AFBE004FD5E8 /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 901045491D66AFBE004FD5E8 /* ThrowLineTool.m */; };
 		9010454D1D66D7BD004FD5E8 /* CaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9010454C1D66D7BD004FD5E8 /* CaptchaView.m */; };
+		9012FC7B1DC3347800382960 /* QLAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9012FC7A1DC3347800382960 /* QLAnnotation.m */; };
 		901C17371D45B2900043D93D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901C17361D45B2900043D93D /* ImageIO.framework */; };
 		901C17391D45B42B0043D93D /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 901C17381D45B42B0043D93D /* 1.gif */; };
 		901C17691D46EEBF0043D93D /* view1.m in Sources */ = {isa = PBXBuildFile; fileRef = 901C17681D46EEBF0043D93D /* view1.m */; };
@@ -44,6 +45,7 @@
 		905DE7B71D8FD72A00492F04 /* Demo1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 905DE7B61D8FD72A00492F04 /* Demo1Cell.m */; };
 		905FE1301CEE9BEA00161E45 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 905FE12F1CEE9BEA00161E45 /* ViewController3.m */; };
 		9062B65D1DC190A400EA838D /* QLUploadFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9062B65C1DC190A400EA838D /* QLUploadFileController.m */; };
+		9062B6601DC1DFC300EA838D /* QLMapLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9062B65F1DC1DFC300EA838D /* QLMapLocationController.m */; };
 		9068F83D1D52D14300F7D2D0 /* ViewController9.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F83C1D52D14300F7D2D0 /* ViewController9.m */; };
 		9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F8411D52D18000F7D2D0 /* PCCircle.m */; };
 		9068F84F1D52D18000F7D2D0 /* PCCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9068F8431D52D18000F7D2D0 /* PCCircleView.m */; };
@@ -141,6 +143,8 @@
 		901045491D66AFBE004FD5E8 /* ThrowLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowLineTool.m; sourceTree = "<group>"; };
 		9010454B1D66D7BD004FD5E8 /* CaptchaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptchaView.h; sourceTree = "<group>"; };
 		9010454C1D66D7BD004FD5E8 /* CaptchaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptchaView.m; sourceTree = "<group>"; };
+		9012FC791DC3347800382960 /* QLAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLAnnotation.h; sourceTree = "<group>"; };
+		9012FC7A1DC3347800382960 /* QLAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLAnnotation.m; sourceTree = "<group>"; };
 		901C17361D45B2900043D93D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		901C17381D45B42B0043D93D /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 		901C17671D46EEBF0043D93D /* view1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = view1.h; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 		905FE12F1CEE9BEA00161E45 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
 		9062B65B1DC190A400EA838D /* QLUploadFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLUploadFileController.h; sourceTree = "<group>"; };
 		9062B65C1DC190A400EA838D /* QLUploadFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLUploadFileController.m; sourceTree = "<group>"; };
+		9062B65E1DC1DFC300EA838D /* QLMapLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLMapLocationController.h; sourceTree = "<group>"; };
+		9062B65F1DC1DFC300EA838D /* QLMapLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLMapLocationController.m; sourceTree = "<group>"; };
 		9068F83B1D52D14300F7D2D0 /* ViewController9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController9.h; sourceTree = "<group>"; };
 		9068F83C1D52D14300F7D2D0 /* ViewController9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController9.m; sourceTree = "<group>"; };
 		9068F8401D52D18000F7D2D0 /* PCCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircle.h; sourceTree = "<group>"; };
@@ -368,8 +374,6 @@
 			children = (
 				90710C231D77C67B0056DEE5 /* TestModel1.h */,
 				90C7FECA1D2DE22800E7FAF6 /* TestModel1.m */,
-				907C8B381CE17F900041B709 /* QLCommonMethod.h */,
-				907C8B391CE17F900041B709 /* QLCommonMethod.m */,
 				901044F11D63F807004FD5E8 /* UIAlertView+Blocks.h */,
 				901044F21D63F807004FD5E8 /* UIAlertView+Blocks.m */,
 				904C002B1D7E92BE00570C44 /* NSNotificationModel.h */,
@@ -477,6 +481,8 @@
 				90E80CD71DBF271100CC5E02 /* QLDownloadFileController.m */,
 				9062B65B1DC190A400EA838D /* QLUploadFileController.h */,
 				9062B65C1DC190A400EA838D /* QLUploadFileController.m */,
+				9062B65E1DC1DFC300EA838D /* QLMapLocationController.h */,
+				9062B65F1DC1DFC300EA838D /* QLMapLocationController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -484,6 +490,8 @@
 		902A90BF1D82873700EAAF05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9012FC791DC3347800382960 /* QLAnnotation.h */,
+				9012FC7A1DC3347800382960 /* QLAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -785,6 +793,8 @@
 		90F18A071DB75A990079F38B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				907C8B381CE17F900041B709 /* QLCommonMethod.h */,
+				907C8B391CE17F900041B709 /* QLCommonMethod.m */,
 				90F18A041DB758CB0079F38B /* QLTextField.h */,
 				90F18A051DB758CB0079F38B /* QLTextField.m */,
 				90E80CD31DBF20F700CC5E02 /* QLViewCreateTool.h */,
@@ -1079,6 +1089,7 @@
 				9068F83D1D52D14300F7D2D0 /* ViewController9.m in Sources */,
 				90ECF9341D864CEA006605F2 /* ADViewController.m in Sources */,
 				9068F84E1D52D18000F7D2D0 /* PCCircle.m in Sources */,
+				9012FC7B1DC3347800382960 /* QLAnnotation.m in Sources */,
 				90E80B511D8799AE00B12F2F /* SEViewController1.m in Sources */,
 				907C8B881CE1E9C90041B709 /* 核心绘图.m in Sources */,
 				90E80CD81DBF271100CC5E02 /* QLDownloadFileController.m in Sources */,
@@ -1087,6 +1098,7 @@
 				90F67B4B1D2350E600469186 /* ViewController7.m in Sources */,
 				902A90B51D827DF600EAAF05 /* SecondController.m in Sources */,
 				90FF34B31D73C7B0007D5C61 /* WKWebViewController.m in Sources */,
+				9062B6601DC1DFC300EA838D /* QLMapLocationController.m in Sources */,
 				90D7AA4D1DAF3170005C6897 /* QLSlideSwitchView.m in Sources */,
 				9068F84F1D52D18000F7D2D0 /* PCCircleView.m in Sources */,
 				9068F8521D52D18000F7D2D0 /* PCCircleInfoView.m in Sources */,

@@ -170,10 +170,10 @@
 }
 
 //根据文字返回frame大小
-+ (CGRect)calculateStrRect:(NSString *)str
++ (CGRect)calculateStrRect:(NSString *)str 
 {
-    CGSize textSize = CGSizeMake(MAXFLOAT, 30);
-    NSDictionary *attributes = @{NSFontAttributeName :[UIFont systemFontOfSize:10.f]};
+    CGSize textSize = CGSizeMake(KScreenSize.width - 20, 0);
+    NSDictionary *attributes = @{NSFontAttributeName :[UIFont systemFontOfSize:defaultFontSize]};
     CGRect textRect = [str boundingRectWithSize:textSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:attributes context:nil];
     return textRect;
 }
@@ -235,6 +235,11 @@
 - (NSString *)UTF8string:(NSString *)urlPath
 {
     NSString *urlString = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    //iOS10 上边的方法弃用
+    if (currentSystemVersion >= 10.0) {
+        urlString = [urlPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    }
     return urlString;
 }
 

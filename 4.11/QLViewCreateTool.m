@@ -8,8 +8,7 @@
 
 #import "QLViewCreateTool.h"
 
-static const CGFloat defaultCornerRadius = 10.f;
-static const CGFloat defaultFontSize = 15.f;
+
 @implementation QLViewCreateTool
 
 + (UIButton *)createButtonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target sel:(SEL)selector
@@ -19,8 +18,8 @@ static const CGFloat defaultFontSize = 15.f;
     btn.backgroundColor = defaultColor;
     btn.layer.cornerRadius = defaultCornerRadius;
     [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:defaultFontTextColor forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize:defaultFontSize];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     return btn;
 }
@@ -29,7 +28,7 @@ static const CGFloat defaultFontSize = 15.f;
 {
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.text = title;
-    label.textColor = [UIColor greenColor];
+    label.textColor = defaultFontTextColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:defaultFontSize];
     label.backgroundColor = defaultColor;

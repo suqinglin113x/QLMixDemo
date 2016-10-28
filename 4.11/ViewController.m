@@ -121,7 +121,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.layer.cornerRadius = 10;
     [btn setFrame:CGRectMake(0, 70, KScreenSize.width, 50)];
-    btn.backgroundColor = [UIColor grayColor];
+    btn.backgroundColor = currentSystemVersion >= 10.0 ? [UIColor colorWithDisplayP3Red:0.3 green:0.8 blue:0.5 alpha:1.0] : defaultColor;
     [btn setTitle:@"点我" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
@@ -132,8 +132,9 @@
     UILabel *label = [[UILabel alloc] init];
     label.layer.cornerRadius = 10;
     label.clipsToBounds = YES; //(iOS7以后需要设置，按钮貌似不需要设置）
+    
     label.frame = CGRectMake(KScreenSize.width - 150, 130, 140, 50);
-    label.backgroundColor = [UIColor colorWithDisplayP3Red:0.7 green:0.3 blue:0.5 alpha:1.0]; //iOS10 新颜色api
+    label.backgroundColor = currentSystemVersion >= 10.0 ? [UIColor colorWithDisplayP3Red:0.3 green:0.8 blue:0.5 alpha:1.0] : defaultColor; //iOS10 新颜色api
     label.font = [UIFont systemFontOfSize:16];
     label.textAlignment = NSTextAlignmentCenter;
     label.adjustsFontSizeToFitWidth = YES; //根据frame自动调整文字的font大小

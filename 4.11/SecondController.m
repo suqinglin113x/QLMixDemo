@@ -13,6 +13,7 @@
 #import "SViewControllerDemo2.h"//瀑布流
 #import "QLDownloadFileController.h"
 #import "QLUploadFileController.h"
+#import "QLMapLocationController.h"
 
 
 #import "QLTextField.h"
@@ -43,7 +44,6 @@
     
     [self createUI];
     
-    
 }
 
 
@@ -69,6 +69,9 @@
 
     UIButton *uploadBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 230, 150, 30) title:@"点我到上传" target:self sel:@selector(toUploadFile)];
     [self.view addSubview:uploadBtn];
+    
+    UIButton *mapBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 270, 150, 30) title:@"点我到地图定位" target:self sel:@selector(toMapLocation)];
+    [self.view addSubview:mapBtn];
     
 }
 
@@ -125,6 +128,15 @@
     [self.navigationController pushViewController:uploadVC animated:YES];
 }
 
+/**
+ * 到地图定位
+ */
+- (void)toMapLocation
+{
+    QLMapLocationController *mapLocationVC = [[QLMapLocationController alloc] init];
+    mapLocationVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mapLocationVC animated:YES];
+}
 
 /**
  * 到广告页面
