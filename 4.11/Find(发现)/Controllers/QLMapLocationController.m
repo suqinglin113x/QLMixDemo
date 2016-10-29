@@ -212,6 +212,7 @@
 #pragma mark ---UISearchBarDelegate---风儿吹吹🍃🍃🍃🍃🍃🍃，雪儿飘飘❄️❄️❄️❄️❄️❄️---
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [self.view endEditing:YES];
     [self searchNeighborPlace:searchBar.text];
 }
 
