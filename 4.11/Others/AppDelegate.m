@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+//weixin
+#import "WXApi.h"
+
 //ios10  推送
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
@@ -27,7 +30,7 @@
 #import "SecondController.h"
 #import "ThirdController.h"
 
-@interface AppDelegate () <UNUserNotificationCenterDelegate> //代理
+@interface AppDelegate () <UNUserNotificationCenterDelegate, WXApiDelegate> //代理
 
 @end
 
@@ -87,6 +90,8 @@
     [self loadAd];
     
     
+    //注册微信
+    [WXApi registerApp:@"wxfb636c50cdc9ba61"];
     
     
     return YES;
@@ -207,4 +212,31 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+/*
+ *  当其他APP通过应用跳转打开该APP时调用
+ *  @param  app      应用对象
+ *  @param  url      跳转打开该APP的url
+ *  @param  return   是否允许打开该APP
+ */
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+#pragma mark ---weixin delegate ---
+
+- (void)onReq:(BaseReq *)req
+{
+    
+}
+- (void)onResp:(BaseResp *)resp
+{
+    
+}
 @end

@@ -216,13 +216,5 @@
     [self searchNeighborPlace:searchBar.text];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    for (UIView *view in (UISearchBar *)[self.view viewWithTag:102].subviews) {
-        if ([view isKindOfClass:[UITextField class]]) {
-            [(UITextField *)view resignFirstResponder];
-        }
-    }
-    return YES;
-}
+
 @end

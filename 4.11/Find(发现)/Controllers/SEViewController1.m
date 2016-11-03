@@ -7,8 +7,10 @@
 //
 
 #import "SEViewController1.h"
+#import "WXApi.h"
 
-@interface SEViewController1 ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+
+@interface SEViewController1 ()<WXApiDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)NSMutableArray *dataSourceArray;
@@ -198,6 +200,38 @@
     topRowAction.backgroundColor = [UIColor blueColor];
     collectRowAction.backgroundColor = [UIColor grayColor];
     
-    return @[deleteRowAction, collectRowAction, topRowAction];
+    //设置分享
+    UITableViewRowAction *shareAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"分享" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        if ([WXApi isWXAppInstalled]) {
+            
+           
+            
+            WXMediaMessage *message = [WXMediaMessage message];
+            message.title = @"我的简书";
+            message.description = @"笔记and技术收藏";
+            [message setThumbImage:[UIImage imageNamed:@"jianshu.png"]];
+            WXWebpageObject *webPageObject = [WXWebpageObject object];
+            webPageObject.webpageUrl = @"http://www.jianshu.com/";
+            message.mediaObject = webPageObject;
+            
+            SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneSession;
+            
+            [WXApi sendReq:req];
+        }else{
+            [MBProgressHUD showMessage:@"尚未安装微信"];
+        }
+        
+    }];
+    
+    return @[deleteRowAction, collectRowAction, topRowAction, shareAction];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 @end

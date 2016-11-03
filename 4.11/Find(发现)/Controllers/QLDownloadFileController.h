@@ -10,4 +10,5 @@
 
 @interface QLDownloadFileController : UIViewController
 
+- (void)downloadNormalFile;
 @end

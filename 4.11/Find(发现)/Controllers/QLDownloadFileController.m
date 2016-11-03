@@ -73,6 +73,9 @@
     
 }
 
+- (void)parseDownload{
+    //待完善....
+}
 - (void)btnClickToDownloadFile
 {
     //1.首先判断文件是否存在
