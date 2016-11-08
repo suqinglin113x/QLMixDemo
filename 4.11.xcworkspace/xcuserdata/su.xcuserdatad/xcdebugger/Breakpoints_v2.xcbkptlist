@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "4.11/Find(&#x53d1;&#x73b0;)/Controllers/SEViewController1.m"
-            timestampString = "499851842.165284"
+            filePath = "4.11/Find(&#x53d1;&#x73b0;)/Controllers/QLSearchController.m"
+            timestampString = "500261011.825814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "-tableView:editActionsForRowAtIndexPath:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-searchController"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "4.11/Find(&#x53d1;&#x73b0;)/Controllers/QLSearchController.m"
+            timestampString = "500261077.80521"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-searchController"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

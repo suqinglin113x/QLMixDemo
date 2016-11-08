@@ -8,12 +8,14 @@
 
 #import "SecondController.h"
 #import "ADViewController.h"
+#import "QLSearchController.h"
 #import "SEViewController1.h" //Collection
 #import "SViewController2demo1.h" //
 #import "SViewControllerDemo2.h"//瀑布流
 #import "QLDownloadFileController.h"
 #import "QLUploadFileController.h"
 #import "QLMapLocationController.h"
+
 
 #import "QLTextField.h"
 
@@ -23,32 +25,30 @@
 
 @implementation SecondController
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+- (void)viewWillAppear:(BOOL)animated
 {
-    //修改占位符位置 待fix
-    searchBar.searchFieldBackgroundPositionAdjustment = UIOffsetMake(0, 0);
+    //view添加浮动动画
+    [self setBtnAnimation];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     
     self.navigationItem.title = self.title = @"发现";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchClick)];
     
     
     //启动页中的广告的点击通知监听，
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAdVC:) name:@"tapAction" object:nil];
     
     
-    NSString *testString = @"🌹哈哈haha🌹";
-    for (int i = 0; i < testString.length;i++) {    //类比于swift的字符串打印字符
-        unichar ch = [testString characterAtIndex:i];
-        QLLog(@"%c", ch);
-    }
     
     [self createUI];
     
-
+    [self codeTests];
+    
 }
 
 
@@ -84,12 +84,29 @@
     UIButton *mapBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 210, 150, 30) title:@"点我到地图定位" target:self sel:@selector(toMapLocation)];
     [self.scrollView addSubview:mapBtn];
     
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 80, 70, 70)];
+    imageView.image = [[UIImage imageNamed:@"emoji1.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    imageView.layer.cornerRadius = 70/2;
+    imageView.tag = 100;
+    imageView.layer.masksToBounds = YES;
+    imageView.backgroundColor = [UIColor colorWithRed:0.99f green:0.89f blue:0.49f alpha:1.00f];
+    [self.scrollView addSubview:imageView];
+    
+}
+/**
+ *  到tableView页面
+ */
+- (void)searchClick
+{
+    QLSearchController *searchVC = [[QLSearchController alloc] init];
+    searchVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 /**
  *  到tableView页面
  */
-
 - (void)toTableView
 {
     SEViewController1 *seVc1 = [[SEViewController1 alloc] init];
@@ -98,6 +115,7 @@
     self.navigationItem.backBarButtonItem = backButton;
     [self.navigationController pushViewController:seVc1 animated:YES];
 }
+
 /**
  *  到collection页面
  */
@@ -163,4 +181,60 @@
 }
 
 
+#pragma mark ----codeTests-----
+- (void)codeTests
+{
+    NSString *testString = @"🌹哈哈haha🌹";
+    for (int i = 0; i < testString.length;i++) {    //类比于swift的字符串打印字符
+        unichar ch = [testString characterAtIndex:i];
+        QLLog(@"%c", ch);
+    }
+    
+    NSNumber *num1 = [NSNumber numberWithInteger:1];
+    NSMutableArray  *array;
+    [array addObject:num1];
+    [num1 compare:num1];
+    
+}
+
+
+- (void)setBtnAnimation
+{
+    
+    for(UIView *view in _scrollView.subviews)
+    {
+        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        pathAnimation.calculationMode = kCAAnimationPaced;
+        pathAnimation.fillMode = kCAFillModeForwards;
+        
+        pathAnimation.repeatCount = MAXFLOAT;
+        pathAnimation.autoreverses = YES; //
+        pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        pathAnimation.duration = arc4random()% 5 + 5;
+        
+        //圆path
+        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(view.frame, view.frame.size.width / 2 - 10, view.frame.size.width / 2 - 10)];
+        pathAnimation.path = path.CGPath;
+        [view.layer addAnimation:pathAnimation forKey:@"pathAnimation"];
+        
+        //缩放
+        CAKeyframeAnimation *scaleX = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"];
+        scaleX.values = @[@1.0,@1.1,@1.0];
+        scaleX.keyTimes = @[@0.0,@0.5,@1.0];
+        scaleX.repeatCount = MAXFLOAT;
+        scaleX.autoreverses = YES; //
+        scaleX.duration = arc4random()% 5 + 5;
+        [view.layer addAnimation:scaleX forKey:@"transform..scale.x"];
+        
+        CAKeyframeAnimation *scaleY = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"];
+        scaleY.values = @[@1.0, @1.1, @1.0];
+        scaleY.keyTimes = @[@0.0, @0.5, @1.0];
+        scaleY.repeatCount = MAXFLOAT;
+        scaleY.autoreverses = YES;
+        scaleY.duration = arc4random()% 5 + 5;
+        [view.layer addAnimation:scaleY forKey:@"transform.scale.y"];
+    }
+    
+
+}
 @end

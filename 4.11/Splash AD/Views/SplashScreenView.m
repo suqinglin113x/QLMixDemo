@@ -69,9 +69,11 @@
 {
     [self.countTimer invalidate];
     self.countTimer = nil;
-    [UIView animateWithDuration:0.3f animations:^{
+   
+    [UIView animateKeyframesWithDuration:2.0 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeCubicPaced animations:^{
+        self.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
         self.alpha = 0;
-    }completion:^(BOOL finished) {
+    } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
 }

@@ -24,6 +24,17 @@
 
 @implementation SEViewController1
 
+
+
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    //修改占位符位置 待fix
+    searchBar.searchFieldBackgroundPositionAdjustment = UIOffsetMake(0, 0);
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -169,7 +180,7 @@
     return cell;
 }
 
-//编辑每行
+#pragma mark ---行编辑--
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //设置删除按钮

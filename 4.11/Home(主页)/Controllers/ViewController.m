@@ -173,12 +173,14 @@
  */
 - (void)imageGif
 {
-    UIImageView *imageTestV = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 200, 200)];
+    // 一
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 200, 200, 200)];
     NSString *imageStr = [[NSBundle mainBundle] pathForResource:@"1.gif" ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:imageStr];
-    imageTestV.image = [UIImage sd_animatedGIFWithData:data];
-    imageTestV.image = [UIImage sd_animatedGIFNamed:@"1"];
-    [self.view addSubview:imageTestV];
+    imageView.image = [UIImage sd_animatedGIFWithData:data];
+    // 二
+    imageView.image = [UIImage sd_animatedGIFNamed:@"1"];
+    [self.view addSubview:imageView];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

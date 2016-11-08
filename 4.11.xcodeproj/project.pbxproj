@@ -85,6 +85,11 @@
 		875D4C761DC4552B0022EBA2 /* red_line_and_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875D4C5F1DC4552B0022EBA2 /* red_line_and_shadow@2x.png */; };
 		875D4C771DC4552B0022EBA2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875D4C621DC4552B0022EBA2 /* SWRevealViewController.m */; };
 		901C17371D45B2900043D93D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901C17361D45B2900043D93D /* ImageIO.framework */; };
+		902806521DD05E9F00A48FD7 /* cars_total.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902806511DD05E9F00A48FD7 /* cars_total.plist */; };
+		902806551DD060AA00A48FD7 /* QLSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 902806541DD060AA00A48FD7 /* QLSearchController.m */; };
+		902806581DD062F900A48FD7 /* QLCarGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 902806571DD062F900A48FD7 /* QLCarGroup.m */; };
+		9028065B1DD0644000A48FD7 /* QLCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028065A1DD0644000A48FD7 /* QLCar.m */; };
+		9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9028065C1DD06C0300A48FD7 /* emoji1.jpg */; };
 		9041F50A1D5466D80012AC39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9041F5091D5466D80012AC39 /* MessageUI.framework */; };
 		905329BE1DCB01E40040D9DB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 905329B91DCB01E40040D9DB /* libWeChatSDK.a */; };
 		905329BF1DCB01E40040D9DB /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 905329BA1DCB01E40040D9DB /* README.txt */; };
@@ -92,6 +97,7 @@
 		905329C31DCB1CE30040D9DB /* jianshu.png in Resources */ = {isa = PBXBuildFile; fileRef = 905329C21DCB1CE30040D9DB /* jianshu.png */; };
 		90569DC31CD98CBF002A34B0 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90569DC11CD98CBF002A34B0 /* Contacts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		90569DC41CD98CBF002A34B0 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90569DC21CD98CBF002A34B0 /* ContactsUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		907AB10F1DD164540043CD7D /* cellback.gif in Resources */ = {isa = PBXBuildFile; fileRef = 907AB10E1DD164540043CD7D /* cellback.gif */; };
 		907C8B3C1CE1877F0041B709 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907C8B3B1CE1877F0041B709 /* UIKit.framework */; };
 		907C8B3E1CE187990041B709 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907C8B3D1CE187990041B709 /* CoreFoundation.framework */; };
 		907C8B401CE187AE0041B709 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907C8B3F1CE187AE0041B709 /* Accelerate.framework */; };
@@ -286,6 +292,14 @@
 		875D4C611DC4552B0022EBA2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		875D4C621DC4552B0022EBA2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		901C17361D45B2900043D93D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		902806511DD05E9F00A48FD7 /* cars_total.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_total.plist; sourceTree = "<group>"; };
+		902806531DD060AA00A48FD7 /* QLSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSearchController.h; sourceTree = "<group>"; };
+		902806541DD060AA00A48FD7 /* QLSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSearchController.m; sourceTree = "<group>"; };
+		902806561DD062F900A48FD7 /* QLCarGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCarGroup.h; sourceTree = "<group>"; };
+		902806571DD062F900A48FD7 /* QLCarGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCarGroup.m; sourceTree = "<group>"; };
+		902806591DD0644000A48FD7 /* QLCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCar.h; sourceTree = "<group>"; };
+		9028065A1DD0644000A48FD7 /* QLCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCar.m; sourceTree = "<group>"; };
+		9028065C1DD06C0300A48FD7 /* emoji1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emoji1.jpg; sourceTree = "<group>"; };
 		9041F5091D5466D80012AC39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		905329B91DCB01E40040D9DB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		905329BA1DCB01E40040D9DB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -308,6 +322,7 @@
 		90710C4C1D794B490056DEE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		907126E51D4880EE00333E6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		907248DF1D9366A000C8702E /* 4.11.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 4.11.entitlements; sourceTree = "<group>"; };
+		907AB10E1DD164540043CD7D /* cellback.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cellback.gif; sourceTree = "<group>"; };
 		907C8B3B1CE1877F0041B709 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		907C8B3D1CE187990041B709 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		907C8B3F1CE187AE0041B709 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -396,6 +411,8 @@
 			children = (
 				875D4B881DC451AD0022EBA2 /* SecondController.h */,
 				875D4B891DC451AD0022EBA2 /* SecondController.m */,
+				902806531DD060AA00A48FD7 /* QLSearchController.h */,
+				902806541DD060AA00A48FD7 /* QLSearchController.m */,
 				875D4B8A1DC451AD0022EBA2 /* SEViewController1.h */,
 				875D4B8B1DC451AD0022EBA2 /* SEViewController1.m */,
 				875D4B8C1DC451AD0022EBA2 /* SViewController2demo1.h */,
@@ -417,6 +434,10 @@
 			children = (
 				875D4B911DC451AD0022EBA2 /* QLAnnotation.h */,
 				875D4B921DC451AD0022EBA2 /* QLAnnotation.m */,
+				902806561DD062F900A48FD7 /* QLCarGroup.h */,
+				902806571DD062F900A48FD7 /* QLCarGroup.m */,
+				902806591DD0644000A48FD7 /* QLCar.h */,
+				9028065A1DD0644000A48FD7 /* QLCar.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -634,6 +655,9 @@
 				875D4C271DC454E80022EBA2 /* scan_net@2x.png */,
 				905329C01DCB0F790040D9DB /* micro_messenger.png */,
 				905329C21DCB1CE30040D9DB /* jianshu.png */,
+				9028065C1DD06C0300A48FD7 /* emoji1.jpg */,
+				907AB10E1DD164540043CD7D /* cellback.gif */,
+				902806511DD05E9F00A48FD7 /* cars_total.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1040,6 +1064,9 @@
 				90FF34C61D73D37C007D5C61 /* Configuration.plist in Resources */,
 				905329C31DCB1CE30040D9DB /* jianshu.png in Resources */,
 				875D4C751DC4552B0022EBA2 /* icon_rightarrow@2x.png in Resources */,
+				902806521DD05E9F00A48FD7 /* cars_total.plist in Resources */,
+				907AB10F1DD164540043CD7D /* cellback.gif in Resources */,
+				9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */,
 				875D4C281DC454E80022EBA2 /* 1.gif in Resources */,
 				905329C11DCB0F790040D9DB /* micro_messenger.png in Resources */,
 				875D4C741DC4552B0022EBA2 /* icon_rightarrow.png in Resources */,
@@ -1164,11 +1191,13 @@
 				875D4BEC1DC451AD0022EBA2 /* BezierPathView.m in Sources */,
 				875D4C6E1DC4552B0022EBA2 /* PCCircleView.m in Sources */,
 				875D4BF41DC451AD0022EBA2 /* ThirdController.m in Sources */,
+				902806581DD062F900A48FD7 /* QLCarGroup.m in Sources */,
 				875D4BD21DC451AD0022EBA2 /* QLDownloadFileController.m in Sources */,
 				875D4BF01DC451AD0022EBA2 /* TableViewCell1.m in Sources */,
 				875D4C671DC4552B0022EBA2 /* MASLayoutConstraint.m in Sources */,
 				875D4BDC1DC451AD0022EBA2 /* QLFlowLayout.m in Sources */,
 				875D4C6C1DC4552B0022EBA2 /* View+MASAdditions.m in Sources */,
+				9028065B1DD0644000A48FD7 /* QLCar.m in Sources */,
 				908A759A1CBB354D00FBF20B /* main.m in Sources */,
 				875D4C651DC4552B0022EBA2 /* MASConstraint.m in Sources */,
 				875D4BF11DC451AD0022EBA2 /* ThrowLineTool.m in Sources */,
@@ -1189,6 +1218,7 @@
 				875D4BE21DC451AD0022EBA2 /* ViewController4.m in Sources */,
 				875D4BD71DC451AD0022EBA2 /* SViewController2demo1.m in Sources */,
 				875D4BE01DC451AD0022EBA2 /* ViewController2.m in Sources */,
+				902806551DD060AA00A48FD7 /* QLSearchController.m in Sources */,
 				875D4C1F1DC454880022EBA2 /* UIImage+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
