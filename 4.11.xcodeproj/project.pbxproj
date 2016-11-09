@@ -86,6 +86,7 @@
 		9028065B1DD0644000A48FD7 /* QLCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028065A1DD0644000A48FD7 /* QLCar.m */; };
 		9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9028065C1DD06C0300A48FD7 /* emoji1.jpg */; };
 		9041F50A1D5466D80012AC39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9041F5091D5466D80012AC39 /* MessageUI.framework */; };
+		9050D2351DD315DE00CE39DA /* QLMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2341DD315DE00CE39DA /* QLMaskView.m */; };
 		905329BE1DCB01E40040D9DB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 905329B91DCB01E40040D9DB /* libWeChatSDK.a */; };
 		905329BF1DCB01E40040D9DB /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 905329BA1DCB01E40040D9DB /* README.txt */; };
 		905329C11DCB0F790040D9DB /* micro_messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 905329C01DCB0F790040D9DB /* micro_messenger.png */; };
@@ -292,6 +293,8 @@
 		9028065A1DD0644000A48FD7 /* QLCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCar.m; sourceTree = "<group>"; };
 		9028065C1DD06C0300A48FD7 /* emoji1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emoji1.jpg; sourceTree = "<group>"; };
 		9041F5091D5466D80012AC39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9050D2331DD315DE00CE39DA /* QLMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMaskView.h; path = "4.11/Mine(我的)/Controllers/QLMaskView.h"; sourceTree = SOURCE_ROOT; };
+		9050D2341DD315DE00CE39DA /* QLMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMaskView.m; path = "4.11/Mine(我的)/Controllers/QLMaskView.m"; sourceTree = SOURCE_ROOT; };
 		905329B91DCB01E40040D9DB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		905329BA1DCB01E40040D9DB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		905329BB1DCB01E40040D9DB /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
@@ -556,6 +559,8 @@
 		875D4BD11DC451AD0022EBA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9050D2331DD315DE00CE39DA /* QLMaskView.h */,
+				9050D2341DD315DE00CE39DA /* QLMaskView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1186,6 +1191,7 @@
 				9028065B1DD0644000A48FD7 /* QLCar.m in Sources */,
 				908A759A1CBB354D00FBF20B /* main.m in Sources */,
 				875D4C651DC4552B0022EBA2 /* MASConstraint.m in Sources */,
+				9050D2351DD315DE00CE39DA /* QLMaskView.m in Sources */,
 				875D4BF11DC451AD0022EBA2 /* ThrowLineTool.m in Sources */,
 				875D4BE11DC451AD0022EBA2 /* ViewController3.m in Sources */,
 				875D4BE61DC451AD0022EBA2 /* ViewController8.m in Sources */,
