@@ -7,6 +7,9 @@
 //
 
 #import "ThirdController.h"
+#import "QLScanViewController.h"
+
+
 
 @implementation ThirdController
 
@@ -26,17 +29,20 @@
 
 - (void)createUI
 {
-    UIButton *settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    settingBtn.frame = CGRectMake(10, 70, 150, 30);
-    settingBtn.backgroundColor = [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6];
-    settingBtn.layer.cornerRadius = 4.f;
-    [settingBtn setTitle:@"点我到系统设置" forState:UIControlStateNormal];
-    settingBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
-    [settingBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [settingBtn addTarget:self action:@selector(toSystemSetting) forControlEvents:UIControlEventTouchUpInside];
+
+    UIButton *settingBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 70, 150, 30) title:@"点我到系统设置" target:self sel:@selector(toSystemSetting)];
     [self.view addSubview:settingBtn];
+    
+    
+    UIButton *scanBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 110, 150, 30) title:@"点我到扫描" target:self sel:@selector(toScan)];
+    [self.view addSubview:scanBtn];
+    
+    
 }
 
+/**
+ *  到设置页面
+ */
 - (void)toSystemSetting
 {
     QLLog(@"跳转到设置");
@@ -51,4 +57,16 @@
     //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{UIApplicationOpenURLOptionUniversalLinksOnly : @YES} completionHandler:nil];
     
 }
+
+/**
+ *  到扫描页面
+ */
+- (void)toScan
+{
+    QLScanViewController *scanVC = [[QLScanViewController alloc] init];
+    scanVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:scanVC animated:YES];
+}
+
+
 @end

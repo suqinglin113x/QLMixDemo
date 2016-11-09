@@ -27,6 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
     //view添加浮动动画
     [self setBtnAnimation];
 }
@@ -42,7 +43,6 @@
     
     //启动页中的广告的点击通知监听，
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAdVC:) name:@"tapAction" object:nil];
-    
     
     
     [self createUI];
@@ -62,6 +62,7 @@
     
     
     UIButton *tableViewBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 10, 150, 30) title:@"点我到TableView" target:self sel:@selector(toTableView)];
+    tableViewBtn.tag = 101;
     [self.scrollView addSubview:tableViewBtn];
     QLLog(@"%@",tableViewBtn.currentTitle); //输出按钮文字 two ways
     QLLog(@"%@",tableViewBtn.titleLabel.text);
@@ -93,6 +94,8 @@
     imageView.backgroundColor = [UIColor colorWithRed:0.99f green:0.89f blue:0.49f alpha:1.00f];
     [self.scrollView addSubview:imageView];
     
+    
+
 }
 /**
  *  到tableView页面
@@ -181,6 +184,66 @@
 }
 
 
+
+- (void)setBtnAnimation
+{
+    
+    if (currentSystemVersion <= 9.0) {
+        UIImageView *view = (UIImageView *)[_scrollView viewWithTag:100];
+        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        pathAnimation.calculationMode = kCAAnimationPaced;
+        pathAnimation.fillMode = kCAFillModeForwards;
+        
+        pathAnimation.repeatCount = MAXFLOAT;
+        pathAnimation.autoreverses = YES; //
+        pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        pathAnimation.duration = arc4random()% 5 + 5;
+        
+        //圆path
+        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(view.frame, view.frame.size.width / 2 - 10, view.frame.size.width / 2 - 10)];
+        pathAnimation.path = path.CGPath;
+        [view.layer addAnimation:pathAnimation forKey:@"pathAnimation"];
+    }else{
+    
+#warning 不知道为啥真机ios8.3下按钮部分动画失效。待解决.......
+    
+        for(UIView *view in _scrollView.subviews)
+        {
+            CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+            pathAnimation.calculationMode = kCAAnimationPaced;
+            pathAnimation.fillMode = kCAFillModeForwards;
+            
+            pathAnimation.repeatCount = MAXFLOAT;
+            pathAnimation.autoreverses = YES; //
+            pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+            pathAnimation.duration = arc4random()% 5 + 5;
+            
+            //圆path
+            UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(view.frame, view.frame.size.width / 2 - 10, view.frame.size.width / 2 - 10)];
+            pathAnimation.path = path.CGPath;
+            [view.layer addAnimation:pathAnimation forKey:@"pathAnimation"];
+            
+            //缩放
+            CAKeyframeAnimation *scaleX = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"];
+            scaleX.values = @[@1.0,@1.1,@1.0];
+            scaleX.keyTimes = @[@0.0,@0.5,@1.0];
+            scaleX.repeatCount = MAXFLOAT;
+            scaleX.autoreverses = YES; //
+            scaleX.duration = arc4random()% 5 + 5;
+            [view.layer addAnimation:scaleX forKey:@"transform..scale.x"];
+            
+            CAKeyframeAnimation *scaleY = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"];
+            scaleY.values = @[@1.0, @1.1, @1.0];
+            scaleY.keyTimes = @[@0.0, @0.5, @1.0];
+            scaleY.repeatCount = MAXFLOAT;
+            scaleY.autoreverses = YES;
+            scaleY.duration = arc4random()% 5 + 5;
+            [view.layer addAnimation:scaleY forKey:@"transform.scale.y"];
+        }
+    }
+}
+
+
 #pragma mark ----codeTests-----
 - (void)codeTests
 {
@@ -197,44 +260,4 @@
     
 }
 
-
-- (void)setBtnAnimation
-{
-    
-    for(UIView *view in _scrollView.subviews)
-    {
-        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-        pathAnimation.calculationMode = kCAAnimationPaced;
-        pathAnimation.fillMode = kCAFillModeForwards;
-        
-        pathAnimation.repeatCount = MAXFLOAT;
-        pathAnimation.autoreverses = YES; //
-        pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-        pathAnimation.duration = arc4random()% 5 + 5;
-        
-        //圆path
-        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(view.frame, view.frame.size.width / 2 - 10, view.frame.size.width / 2 - 10)];
-        pathAnimation.path = path.CGPath;
-        [view.layer addAnimation:pathAnimation forKey:@"pathAnimation"];
-        
-        //缩放
-        CAKeyframeAnimation *scaleX = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.x"];
-        scaleX.values = @[@1.0,@1.1,@1.0];
-        scaleX.keyTimes = @[@0.0,@0.5,@1.0];
-        scaleX.repeatCount = MAXFLOAT;
-        scaleX.autoreverses = YES; //
-        scaleX.duration = arc4random()% 5 + 5;
-        [view.layer addAnimation:scaleX forKey:@"transform..scale.x"];
-        
-        CAKeyframeAnimation *scaleY = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale.y"];
-        scaleY.values = @[@1.0, @1.1, @1.0];
-        scaleY.keyTimes = @[@0.0, @0.5, @1.0];
-        scaleY.repeatCount = MAXFLOAT;
-        scaleY.autoreverses = YES;
-        scaleY.duration = arc4random()% 5 + 5;
-        [view.layer addAnimation:scaleY forKey:@"transform.scale.y"];
-    }
-    
-
-}
 @end
