@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "QLMaskView.h"
 
+#import "UIViewController+AlertMessage.h"
 
 @interface QLScanViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 
@@ -100,10 +101,10 @@
         [self.session stopRunning];
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects firstObject];
         
-        [self.session startRunning];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"扫描结果" message:metadataObject.stringValue delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-        [alert show];
+     
+        [self showAlertWithTitle:@"扫描结果" message:metadataObject.stringValue handler:^(UIAlertAction *action) {
+            [self.session startRunning];
+        }];
     }
 }
 

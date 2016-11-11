@@ -189,14 +189,14 @@
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
     //检索范围
     request.region = MKCoordinateRegionMakeWithDistance(self.currentCoordinate, 1000, 1000);
-    //兴趣点
+    //检索内容
     request.naturalLanguageQuery = searchText;
     
     //初始化检索
     MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
     //开始检索
     [search startWithCompletionHandler:^(MKLocalSearchResponse * _Nullable response, NSError * _Nullable error) {
-        //兴趣点数组
+        //检索内容数组
         NSArray *array = [NSArray arrayWithArray:response.mapItems];
         for (MKMapItem *item in array) {
             MKPointAnnotation *point = [[MKPointAnnotation alloc] init];

@@ -15,6 +15,7 @@
 #import "QLDownloadFileController.h"
 #import "QLUploadFileController.h"
 #import "QLMapLocationController.h"
+#import "QLNormalScrollController.h"
 
 
 #import "QLTextField.h"
@@ -34,10 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     self.navigationItem.title = self.title = @"发现";
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchClick)];
     
     
@@ -85,6 +85,8 @@
     UIButton *mapBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 210, 150, 30) title:@"点我到地图定位" target:self sel:@selector(toMapLocation)];
     [self.scrollView addSubview:mapBtn];
     
+    UIButton *scrollBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 250, 150, 30) title:@"点我到轮播图" target:self sel:@selector(toMaxScroll)];
+    [self.scrollView addSubview:scrollBtn];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 80, 70, 70)];
     imageView.image = [[UIImage imageNamed:@"emoji1.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -98,7 +100,7 @@
 
 }
 /**
- *  到tableView页面
+ *  到搜索页面
  */
 - (void)searchClick
 {
@@ -169,6 +171,16 @@
     QLMapLocationController *mapLocationVC = [[QLMapLocationController alloc] init];
     mapLocationVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mapLocationVC animated:YES];
+}
+
+/**
+ * 到轮播图
+ */
+- (void)toMaxScroll
+{
+    QLNormalScrollController *normalScrollVC = [[QLNormalScrollController alloc] init];
+//    maxScrollVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:normalScrollVC animated:YES];
 }
 
 /**

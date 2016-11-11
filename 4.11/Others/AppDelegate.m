@@ -86,8 +86,12 @@
     // 加载tabbar
     [self initTabBar];
     
-    //开屏广告
-    [self loadAd];
+    //只加载一次广告页面
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"loadAD"]){
+        //开屏广告
+        [self loadAd];
+    }
+    
     
     
     //注册微信
@@ -126,7 +130,8 @@
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     //点击通知进入应用 NSLog(@"response:%@", response);
 }
-    
+
+#pragma mark --广告页---
 - (void)loadAd
 {
     //     启动页停留1秒
@@ -147,6 +152,8 @@
     //无论沙河中是否存在广告图片，都需要重新调用广告接口，判断是否需要更新
     [SplashScreenDataManager getAdvertisingImageData];
     
+    //存储广告加载次数，下次不再加载
+    [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"loadAD"];
 }
 
 

@@ -87,6 +87,8 @@
 		9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9028065C1DD06C0300A48FD7 /* emoji1.jpg */; };
 		9041F50A1D5466D80012AC39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9041F5091D5466D80012AC39 /* MessageUI.framework */; };
 		9050D2351DD315DE00CE39DA /* QLMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2341DD315DE00CE39DA /* QLMaskView.m */; };
+		9050D2411DD4062600CE39DA /* UIViewController+AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2401DD4062600CE39DA /* UIViewController+AlertMessage.m */; };
+		9050D2441DD4406500CE39DA /* QLMaxScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2431DD4406500CE39DA /* QLMaxScrollController.m */; };
 		905329BE1DCB01E40040D9DB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 905329B91DCB01E40040D9DB /* libWeChatSDK.a */; };
 		905329BF1DCB01E40040D9DB /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 905329BA1DCB01E40040D9DB /* README.txt */; };
 		905329C11DCB0F790040D9DB /* micro_messenger.png in Resources */ = {isa = PBXBuildFile; fileRef = 905329C01DCB0F790040D9DB /* micro_messenger.png */; };
@@ -105,6 +107,8 @@
 		908A75B31CBB354D00FBF20B /* __11Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908A75B21CBB354D00FBF20B /* __11Tests.m */; };
 		908A75BE1CBB354D00FBF20B /* __11UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908A75BD1CBB354D00FBF20B /* __11UITests.m */; };
 		90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90DCC1E51DAA29C700EE02CF /* Localizable.strings */; };
+		90F8A4D01DD5562F000519FC /* QLInfinitRollScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */; };
+		90F8A4DC1DD5B1A4000519FC /* QLNormalScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */; };
 		90FF34C11D73D315007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C01D73D315007D5C61 /* Configuration.plist */; };
 		90FF34C61D73D37C007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C51D73D37C007D5C61 /* Configuration.plist */; };
 		90FF34C81D73D386007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C71D73D386007D5C61 /* Configuration.plist */; };
@@ -295,6 +299,10 @@
 		9041F5091D5466D80012AC39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9050D2331DD315DE00CE39DA /* QLMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMaskView.h; path = "4.11/Mine(我的)/Controllers/QLMaskView.h"; sourceTree = SOURCE_ROOT; };
 		9050D2341DD315DE00CE39DA /* QLMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMaskView.m; path = "4.11/Mine(我的)/Controllers/QLMaskView.m"; sourceTree = SOURCE_ROOT; };
+		9050D23F1DD4062600CE39DA /* UIViewController+AlertMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AlertMessage.h"; sourceTree = "<group>"; };
+		9050D2401DD4062600CE39DA /* UIViewController+AlertMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AlertMessage.m"; sourceTree = "<group>"; };
+		9050D2421DD4406500CE39DA /* QLMaxScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLMaxScrollController.h; sourceTree = "<group>"; };
+		9050D2431DD4406500CE39DA /* QLMaxScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLMaxScrollController.m; sourceTree = "<group>"; };
 		905329B91DCB01E40040D9DB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		905329BA1DCB01E40040D9DB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		905329BB1DCB01E40040D9DB /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
@@ -340,6 +348,10 @@
 		90DCC1E81DAA29E100EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		90DCC1E91DAA29E200EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		90DCC1EA1DAA29E200EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		90F8A4CE1DD5562F000519FC /* QLInfinitRollScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLInfinitRollScrollView.h; sourceTree = "<group>"; };
+		90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLInfinitRollScrollView.m; sourceTree = "<group>"; };
+		90F8A4DA1DD5B1A4000519FC /* QLNormalScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLNormalScrollController.h; sourceTree = "<group>"; };
+		90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLNormalScrollController.m; sourceTree = "<group>"; };
 		90FF34C01D73D315007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		90FF34C51D73D37C007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		90FF34C71D73D386007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
@@ -407,20 +419,15 @@
 			children = (
 				875D4B881DC451AD0022EBA2 /* SecondController.h */,
 				875D4B891DC451AD0022EBA2 /* SecondController.m */,
-				902806531DD060AA00A48FD7 /* QLSearchController.h */,
-				902806541DD060AA00A48FD7 /* QLSearchController.m */,
 				875D4B8A1DC451AD0022EBA2 /* SEViewController1.h */,
 				875D4B8B1DC451AD0022EBA2 /* SEViewController1.m */,
 				875D4B8C1DC451AD0022EBA2 /* SViewController2demo1.h */,
 				875D4B8D1DC451AD0022EBA2 /* SViewController2demo1.m */,
-				875D4B8E1DC451AD0022EBA2 /* SViewControllerDemo2.h */,
-				875D4B8F1DC451AD0022EBA2 /* SViewControllerDemo2.m */,
-				875D4B821DC451AD0022EBA2 /* QLDownloadFileController.h */,
-				875D4B831DC451AD0022EBA2 /* QLDownloadFileController.m */,
-				875D4B861DC451AD0022EBA2 /* QLUploadFileController.h */,
-				875D4B871DC451AD0022EBA2 /* QLUploadFileController.m */,
-				875D4B841DC451AD0022EBA2 /* QLMapLocationController.h */,
-				875D4B851DC451AD0022EBA2 /* QLMapLocationController.m */,
+				90F8A4D31DD5AFD7000519FC /* 搜索 */,
+				90F8A4D91DD5B118000519FC /* 瀑布流 */,
+				90F8A4D21DD5AF79000519FC /* 文件down and up */,
+				90F8A4D41DD5B012000519FC /* 地图map */,
+				90F8A4D11DD5AF55000519FC /* 轮播图 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,10 +450,8 @@
 			children = (
 				875D4B941DC451AD0022EBA2 /* Demo1Cell.h */,
 				875D4B951DC451AD0022EBA2 /* Demo1Cell.m */,
-				875D4B961DC451AD0022EBA2 /* FallWaterCell.h */,
-				875D4B971DC451AD0022EBA2 /* FallWaterCell.m */,
-				875D4B981DC451AD0022EBA2 /* QLFlowLayout.h */,
-				875D4B991DC451AD0022EBA2 /* QLFlowLayout.m */,
+				90F8A4D51DD5B02B000519FC /* 瀑布流 */,
+				90F8A4D61DD5B066000519FC /* 轮播Infinite Roll */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -543,8 +548,7 @@
 			children = (
 				875D4BCE1DC451AD0022EBA2 /* ThirdController.h */,
 				875D4BCF1DC451AD0022EBA2 /* ThirdController.m */,
-				907AB1101DD1BE240043CD7D /* QLScanViewController.h */,
-				907AB1111DD1BE240043CD7D /* QLScanViewController.m */,
+				90F8A4D81DD5B0D7000519FC /* 扫描scan */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -559,8 +563,7 @@
 		875D4BD11DC451AD0022EBA2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9050D2331DD315DE00CE39DA /* QLMaskView.h */,
-				9050D2341DD315DE00CE39DA /* QLMaskView.m */,
+				90F8A4D71DD5B0A3000519FC /* 扫描scan */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,6 +641,8 @@
 				875D4C1A1DC454880022EBA2 /* NSObject+Property.m */,
 				875D4C1B1DC454880022EBA2 /* UIImage+Category.h */,
 				875D4C1C1DC454880022EBA2 /* UIImage+Category.m */,
+				9050D23F1DD4062600CE39DA /* UIViewController+AlertMessage.h */,
+				9050D2401DD4062600CE39DA /* UIViewController+AlertMessage.m */,
 			);
 			name = Extentions;
 			path = "Find(发现)/Tools/Extentions";
@@ -899,6 +904,93 @@
 				908A75BF1CBB354D00FBF20B /* Info.plist */,
 			);
 			path = 4.11UITests;
+			sourceTree = "<group>";
+		};
+		90F8A4D11DD5AF55000519FC /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				90F8A4DA1DD5B1A4000519FC /* QLNormalScrollController.h */,
+				90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */,
+				9050D2421DD4406500CE39DA /* QLMaxScrollController.h */,
+				9050D2431DD4406500CE39DA /* QLMaxScrollController.m */,
+			);
+			name = "轮播图";
+			sourceTree = "<group>";
+		};
+		90F8A4D21DD5AF79000519FC /* 文件down and up */ = {
+			isa = PBXGroup;
+			children = (
+				875D4B821DC451AD0022EBA2 /* QLDownloadFileController.h */,
+				875D4B831DC451AD0022EBA2 /* QLDownloadFileController.m */,
+				875D4B861DC451AD0022EBA2 /* QLUploadFileController.h */,
+				875D4B871DC451AD0022EBA2 /* QLUploadFileController.m */,
+			);
+			name = "文件down and up";
+			sourceTree = "<group>";
+		};
+		90F8A4D31DD5AFD7000519FC /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				902806531DD060AA00A48FD7 /* QLSearchController.h */,
+				902806541DD060AA00A48FD7 /* QLSearchController.m */,
+			);
+			name = "搜索";
+			sourceTree = "<group>";
+		};
+		90F8A4D41DD5B012000519FC /* 地图map */ = {
+			isa = PBXGroup;
+			children = (
+				875D4B841DC451AD0022EBA2 /* QLMapLocationController.h */,
+				875D4B851DC451AD0022EBA2 /* QLMapLocationController.m */,
+			);
+			name = "地图map";
+			sourceTree = "<group>";
+		};
+		90F8A4D51DD5B02B000519FC /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				875D4B961DC451AD0022EBA2 /* FallWaterCell.h */,
+				875D4B971DC451AD0022EBA2 /* FallWaterCell.m */,
+				875D4B981DC451AD0022EBA2 /* QLFlowLayout.h */,
+				875D4B991DC451AD0022EBA2 /* QLFlowLayout.m */,
+			);
+			name = "瀑布流";
+			sourceTree = "<group>";
+		};
+		90F8A4D61DD5B066000519FC /* 轮播Infinite Roll */ = {
+			isa = PBXGroup;
+			children = (
+				90F8A4CE1DD5562F000519FC /* QLInfinitRollScrollView.h */,
+				90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */,
+			);
+			name = "轮播Infinite Roll";
+			sourceTree = "<group>";
+		};
+		90F8A4D71DD5B0A3000519FC /* 扫描scan */ = {
+			isa = PBXGroup;
+			children = (
+				9050D2331DD315DE00CE39DA /* QLMaskView.h */,
+				9050D2341DD315DE00CE39DA /* QLMaskView.m */,
+			);
+			name = "扫描scan";
+			sourceTree = "<group>";
+		};
+		90F8A4D81DD5B0D7000519FC /* 扫描scan */ = {
+			isa = PBXGroup;
+			children = (
+				907AB1101DD1BE240043CD7D /* QLScanViewController.h */,
+				907AB1111DD1BE240043CD7D /* QLScanViewController.m */,
+			);
+			name = "扫描scan";
+			sourceTree = "<group>";
+		};
+		90F8A4D91DD5B118000519FC /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				875D4B8E1DC451AD0022EBA2 /* SViewControllerDemo2.h */,
+				875D4B8F1DC451AD0022EBA2 /* SViewControllerDemo2.m */,
+			);
+			name = "瀑布流";
 			sourceTree = "<group>";
 		};
 		90FF34C21D73D31B007D5C61 /* Release */ = {
@@ -1170,10 +1262,12 @@
 				875D4C151DC454330022EBA2 /* QLViewCreateTool.m in Sources */,
 				875D4BEA1DC451AD0022EBA2 /* TestModel1.m in Sources */,
 				875D4C6B1DC4552B0022EBA2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				90F8A4DC1DD5B1A4000519FC /* QLNormalScrollController.m in Sources */,
 				875D4BFC1DC452000022EBA2 /* AppDelegate.m in Sources */,
 				875D4C681DC4552B0022EBA2 /* MASViewAttribute.m in Sources */,
 				875D4BEB1DC451AD0022EBA2 /* UIAlertView+Blocks.m in Sources */,
 				875D4BEF1DC451AD0022EBA2 /* shadowView.m in Sources */,
+				9050D2441DD4406500CE39DA /* QLMaxScrollController.m in Sources */,
 				875D4C6A1DC4552B0022EBA2 /* NSArray+MASAdditions.m in Sources */,
 				875D4BD51DC451AD0022EBA2 /* SecondController.m in Sources */,
 				875D4C6D1DC4552B0022EBA2 /* PCCircle.m in Sources */,
@@ -1182,6 +1276,7 @@
 				875D4BEC1DC451AD0022EBA2 /* BezierPathView.m in Sources */,
 				875D4C6E1DC4552B0022EBA2 /* PCCircleView.m in Sources */,
 				875D4BF41DC451AD0022EBA2 /* ThirdController.m in Sources */,
+				90F8A4D01DD5562F000519FC /* QLInfinitRollScrollView.m in Sources */,
 				902806581DD062F900A48FD7 /* QLCarGroup.m in Sources */,
 				875D4BD21DC451AD0022EBA2 /* QLDownloadFileController.m in Sources */,
 				875D4BF01DC451AD0022EBA2 /* TableViewCell1.m in Sources */,
@@ -1209,6 +1304,7 @@
 				875D4BD81DC451AD0022EBA2 /* SViewControllerDemo2.m in Sources */,
 				875D4BE21DC451AD0022EBA2 /* ViewController4.m in Sources */,
 				875D4BD71DC451AD0022EBA2 /* SViewController2demo1.m in Sources */,
+				9050D2411DD4062600CE39DA /* UIViewController+AlertMessage.m in Sources */,
 				875D4BE01DC451AD0022EBA2 /* ViewController2.m in Sources */,
 				902806551DD060AA00A48FD7 /* QLSearchController.m in Sources */,
 				875D4C1F1DC454880022EBA2 /* UIImage+Category.m in Sources */,
