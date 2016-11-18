@@ -109,6 +109,7 @@
 		90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90DCC1E51DAA29C700EE02CF /* Localizable.strings */; };
 		90F8A4D01DD5562F000519FC /* QLInfinitRollScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */; };
 		90F8A4DC1DD5B1A4000519FC /* QLNormalScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */; };
+		90FEA3D61DDE91E500D2C2B0 /* QLTopLeftLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FEA3D51DDE91E500D2C2B0 /* QLTopLeftLabel.m */; };
 		90FF34C11D73D315007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C01D73D315007D5C61 /* Configuration.plist */; };
 		90FF34C61D73D37C007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C51D73D37C007D5C61 /* Configuration.plist */; };
 		90FF34C81D73D386007D5C61 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FF34C71D73D386007D5C61 /* Configuration.plist */; };
@@ -352,6 +353,8 @@
 		90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLInfinitRollScrollView.m; sourceTree = "<group>"; };
 		90F8A4DA1DD5B1A4000519FC /* QLNormalScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLNormalScrollController.h; sourceTree = "<group>"; };
 		90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLNormalScrollController.m; sourceTree = "<group>"; };
+		90FEA3D41DDE91E500D2C2B0 /* QLTopLeftLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLTopLeftLabel.h; sourceTree = "<group>"; };
+		90FEA3D51DDE91E500D2C2B0 /* QLTopLeftLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLTopLeftLabel.m; sourceTree = "<group>"; };
 		90FF34C01D73D315007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		90FF34C51D73D37C007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		90FF34C71D73D386007D5C61 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
@@ -473,8 +476,6 @@
 				875D4B9D1DC451AD0022EBA2 /* CTPropertyViewController.m */,
 				875D4B9E1DC451AD0022EBA2 /* ViewController.h */,
 				875D4B9F1DC451AD0022EBA2 /* ViewController.m */,
-				875D4BA01DC451AD0022EBA2 /* Viewcontroller10.h */,
-				875D4BA11DC451AD0022EBA2 /* Viewcontroller10.m */,
 				875D4BA21DC451AD0022EBA2 /* ViewController2.h */,
 				875D4BA31DC451AD0022EBA2 /* ViewController2.m */,
 				875D4BA41DC451AD0022EBA2 /* ViewController3.h */,
@@ -491,6 +492,8 @@
 				875D4BAF1DC451AD0022EBA2 /* ViewController8.m */,
 				875D4BB01DC451AD0022EBA2 /* ViewController9.h */,
 				875D4BB11DC451AD0022EBA2 /* ViewController9.m */,
+				875D4BA01DC451AD0022EBA2 /* Viewcontroller10.h */,
+				875D4BA11DC451AD0022EBA2 /* Viewcontroller10.m */,
 				875D4BB21DC451AD0022EBA2 /* WKWebViewController.h */,
 				875D4BB31DC451AD0022EBA2 /* WKWebViewController.m */,
 			);
@@ -627,6 +630,8 @@
 				875D4C101DC454330022EBA2 /* QLTextField.m */,
 				875D4C111DC454330022EBA2 /* QLViewCreateTool.h */,
 				875D4C121DC454330022EBA2 /* QLViewCreateTool.m */,
+				90FEA3D41DDE91E500D2C2B0 /* QLTopLeftLabel.h */,
+				90FEA3D51DDE91E500D2C2B0 /* QLTopLeftLabel.m */,
 			);
 			name = Tools;
 			path = "Find(发现)/Tools";
@@ -1300,6 +1305,7 @@
 				875D4C711DC4552B0022EBA2 /* PCCircleInfoView.m in Sources */,
 				875D4BEE1DC451AD0022EBA2 /* QLCollectionViewFlowLayout.m in Sources */,
 				875D4C6F1DC4552B0022EBA2 /* PCCircleViewConst.m in Sources */,
+				90FEA3D61DDE91E500D2C2B0 /* QLTopLeftLabel.m in Sources */,
 				875D4C0A1DC4535C0022EBA2 /* SplashScreenDataManager.m in Sources */,
 				875D4BD81DC451AD0022EBA2 /* SViewControllerDemo2.m in Sources */,
 				875D4BE21DC451AD0022EBA2 /* ViewController4.m in Sources */,

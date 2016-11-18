@@ -112,7 +112,7 @@
     self.isFirstLoadImage = YES;
     
     //让scrollView始终显示最中间的空间view
-    if (self.isScrollDirectionPortrait) {
+    if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {
         
         [self.scrollView setContentOffset:CGPointMake(0, self.scrollView.frame.size.height)];
         
@@ -130,7 +130,7 @@
     
     self.scrollView.frame = self.bounds;
     
-    if (self.isScrollDirectionPortrait) {//竖向滚动
+    if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {//竖向滚动
         self.scrollView.contentSize = CGSizeMake(0, self.defaltCount * self.bounds.size.height);
     }else{//横向滚动
         self.scrollView.contentSize = CGSizeMake(self.defaltCount *self.bounds.size.width, 0);
@@ -138,7 +138,7 @@
     
     for (int i = 0; i <self.defaltCount; i++) {
         UIImageView *imageView = self.scrollView.subviews[i];
-        if (self.isScrollDirectionPortrait) {
+        if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {
             imageView.frame = CGRectMake(0, i *self.scrollView.frame.size.height, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
         }else{
             imageView.frame = CGRectMake(i *self.scrollView.frame.size.width, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
@@ -176,7 +176,7 @@
 
 - (void)autoScroll
 {
-    if (self.isScrollDirectionPortrait) {
+    if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {
         [self.scrollView setContentOffset:CGPointMake(0, 2 *self.scrollView.frame.size.height) animated:YES];
     }else{
         [self.scrollView setContentOffset:CGPointMake(2 *self.scrollView.frame.size.width, 0) animated:YES];
@@ -201,7 +201,7 @@
     for (int i = 0; i <self.defaltCount; i++) {
         UIImageView *imageView = self.scrollView.subviews[i];
         CGFloat distance = 0;
-        if (self.isScrollDirectionPortrait) {
+        if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {
             distance = ABS(imageView.frame.origin.y - scrollView.contentOffset.y);
         }else{
             distance = ABS(imageView.frame.origin.x - scrollView.contentOffset.x);

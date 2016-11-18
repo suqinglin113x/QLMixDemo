@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    QLInfinitRollScrollViewTypePortrait,    //竖roll
+    QLInfinitRollScrollViewTypelandscape,   //横roll
+} QLInfinitRollScrollViewType;
+
 @class QLInfinitRollScrollView;
 @protocol QLInfinitRollScrollViewDelegate <NSObject>
 
@@ -18,14 +23,13 @@
 
 
 
-
 @interface QLInfinitRollScrollView : UIView
 
 /**需要显示的图片资源*/
 @property (nonatomic, strong) NSArray *imageArray;
 
 /**是否竖屏，默认NO*/
-@property (nonatomic, assign, getter=isScrollDirectionPortrait) BOOL isScrollDirectionPortrait;
+@property (nonatomic, assign) QLInfinitRollScrollViewType rollDirectionType;
 
 /**页码指示器*/
 @property (nonatomic, strong) UIPageControl *pageControl;
