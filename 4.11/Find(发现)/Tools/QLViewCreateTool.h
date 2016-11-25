@@ -12,6 +12,6 @@
 
 + (UIButton *)createButtonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target sel:(SEL)selector;
 
-+ (UILabel *)createLabelWithFrame:(CGRect)frame title:(NSString *)title;
++ (UILabel *)createLabelWithFrame:(CGRect)frame title:(NSString *)title bgColor:(UIColor *)bgColor textColor:(UIColor *)textColor;
 
 @end

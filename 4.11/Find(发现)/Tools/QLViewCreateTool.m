@@ -25,14 +25,14 @@
     return btn;
 }
 
-+ (UILabel *)createLabelWithFrame:(CGRect)frame title:(NSString *)title
++ (UILabel *)createLabelWithFrame:(CGRect)frame title:(NSString *)title bgColor:(UIColor *)bgColor textColor:(UIColor *)textColor
 {
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.text = title;
-    label.textColor = defaultFontTextColor;
+    label.textColor = textColor? textColor: defaultFontTextColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:defaultFontSize];
-    label.backgroundColor = defaultColor;
+    label.backgroundColor = bgColor? bgColor: defaultColor;
     label.layer.cornerRadius = defaultCornerRadius;
     label.layer.masksToBounds = YES;
     return label;

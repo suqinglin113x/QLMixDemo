@@ -58,11 +58,11 @@
 
 - (void)createUI
 {
-    UILabel *coordinateLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil];
+    UILabel *coordinateLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil bgColor:nil textColor:nil];
     coordinateLabel.tag = 100;
     [self.view addSubview:coordinateLabel];
     
-    UILabel *addressLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil];
+    UILabel *addressLabel = [QLViewCreateTool createLabelWithFrame:CGRectZero title:nil bgColor:nil textColor:nil];
     addressLabel.tag = 101;
     [self.view addSubview:addressLabel];
     

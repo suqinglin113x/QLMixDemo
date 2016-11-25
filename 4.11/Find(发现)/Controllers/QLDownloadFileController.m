@@ -70,7 +70,7 @@
     UIButton *deleteFileBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 120, 100, 30) title:@"清除缓存" target:self sel:@selector(deleteDownloadFile)];
     [self.view addSubview:deleteFileBtn];
     
-    UILabel *progressLabel = [QLViewCreateTool createLabelWithFrame:CGRectMake(120, 80, 70, 30) title:@"0.00"];
+    UILabel *progressLabel = [QLViewCreateTool createLabelWithFrame:CGRectMake(120, 80, 70, 30) title:@"0.00" bgColor:nil textColor:nil];
     progressLabel.tag = 100;
     [self.view addSubview:progressLabel];
     

@@ -7,8 +7,8 @@
 //
 
 /**
- 重写下面方法，在调用super之前重绘rect
- ：文字显示在左上角
+    重写下面方法，在调用super之前重绘rect
+    文字显示在左上角
  */
 
 #import "QLTopLeftLabel.h"

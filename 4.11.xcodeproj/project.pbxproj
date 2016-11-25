@@ -85,6 +85,13 @@
 		902806581DD062F900A48FD7 /* QLCarGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 902806571DD062F900A48FD7 /* QLCarGroup.m */; };
 		9028065B1DD0644000A48FD7 /* QLCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9028065A1DD0644000A48FD7 /* QLCar.m */; };
 		9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9028065C1DD06C0300A48FD7 /* emoji1.jpg */; };
+		9041D3E71DE8161C00AD72A4 /* QLSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9041D3E61DE8161C00AD72A4 /* QLSnowView.m */; };
+		9041D3EA1DE8178700AD72A4 /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9041D3E81DE8178700AD72A4 /* favorite@2x.png */; };
+		9041D3EB1DE8178700AD72A4 /* favorite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9041D3E91DE8178700AD72A4 /* favorite@3x.png */; };
+		9041D3F11DE82C5200AD72A4 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9041D3F01DE82C5200AD72A4 /* Sparkle.png */; };
+		9041D3FA1DE834E200AD72A4 /* QLExplosionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9041D3F91DE834E200AD72A4 /* QLExplosionView.m */; };
+		9041D3FD1DE837D900AD72A4 /* Like-Blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9041D3FB1DE837D900AD72A4 /* Like-Blue@2x.png */; };
+		9041D3FE1DE837D900AD72A4 /* Like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9041D3FC1DE837D900AD72A4 /* Like@2x.png */; };
 		9041F50A1D5466D80012AC39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9041F5091D5466D80012AC39 /* MessageUI.framework */; };
 		9050D2351DD315DE00CE39DA /* QLMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2341DD315DE00CE39DA /* QLMaskView.m */; };
 		9050D2411DD4062600CE39DA /* UIViewController+AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9050D2401DD4062600CE39DA /* UIViewController+AlertMessage.m */; };
@@ -106,6 +113,8 @@
 		908A75A81CBB354D00FBF20B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908A75A61CBB354D00FBF20B /* LaunchScreen.storyboard */; };
 		908A75B31CBB354D00FBF20B /* __11Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908A75B21CBB354D00FBF20B /* __11Tests.m */; };
 		908A75BE1CBB354D00FBF20B /* __11UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908A75BD1CBB354D00FBF20B /* __11UITests.m */; };
+		909627C61DE44147004D9C5B /* QLWebJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909627C51DE44147004D9C5B /* QLWebJSController.m */; };
+		909627C81DE443E6004D9C5B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 909627C71DE443E6004D9C5B /* index.html */; };
 		90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90DCC1E51DAA29C700EE02CF /* Localizable.strings */; };
 		90F8A4D01DD5562F000519FC /* QLInfinitRollScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4CF1DD5562F000519FC /* QLInfinitRollScrollView.m */; };
 		90F8A4DC1DD5B1A4000519FC /* QLNormalScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F8A4DB1DD5B1A4000519FC /* QLNormalScrollController.m */; };
@@ -297,6 +306,15 @@
 		902806591DD0644000A48FD7 /* QLCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCar.h; sourceTree = "<group>"; };
 		9028065A1DD0644000A48FD7 /* QLCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCar.m; sourceTree = "<group>"; };
 		9028065C1DD06C0300A48FD7 /* emoji1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emoji1.jpg; sourceTree = "<group>"; };
+		9041D3E51DE8161C00AD72A4 /* QLSnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSnowView.h; sourceTree = "<group>"; };
+		9041D3E61DE8161C00AD72A4 /* QLSnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSnowView.m; sourceTree = "<group>"; };
+		9041D3E81DE8178700AD72A4 /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
+		9041D3E91DE8178700AD72A4 /* favorite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@3x.png"; sourceTree = "<group>"; };
+		9041D3F01DE82C5200AD72A4 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sparkle.png; path = ../../Resources/Sparkle.png; sourceTree = "<group>"; };
+		9041D3F81DE834E200AD72A4 /* QLExplosionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLExplosionView.h; sourceTree = "<group>"; };
+		9041D3F91DE834E200AD72A4 /* QLExplosionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLExplosionView.m; sourceTree = "<group>"; };
+		9041D3FB1DE837D900AD72A4 /* Like-Blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like-Blue@2x.png"; sourceTree = "<group>"; };
+		9041D3FC1DE837D900AD72A4 /* Like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like@2x.png"; sourceTree = "<group>"; };
 		9041F5091D5466D80012AC39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9050D2331DD315DE00CE39DA /* QLMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QLMaskView.h; path = "4.11/Mine(我的)/Controllers/QLMaskView.h"; sourceTree = SOURCE_ROOT; };
 		9050D2341DD315DE00CE39DA /* QLMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QLMaskView.m; path = "4.11/Mine(我的)/Controllers/QLMaskView.m"; sourceTree = SOURCE_ROOT; };
@@ -343,6 +361,9 @@
 		908A75B91CBB354D00FBF20B /* 4.11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4.11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908A75BD1CBB354D00FBF20B /* __11UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __11UITests.m; sourceTree = "<group>"; };
 		908A75BF1CBB354D00FBF20B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909627C41DE44147004D9C5B /* QLWebJSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLWebJSController.h; sourceTree = "<group>"; };
+		909627C51DE44147004D9C5B /* QLWebJSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLWebJSController.m; sourceTree = "<group>"; };
+		909627C71DE443E6004D9C5B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		90DCC1E41DAA29C700EE02CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90DCC1E61DAA29E100EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		90DCC1E71DAA29E100EE02CF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -552,6 +573,7 @@
 				875D4BCE1DC451AD0022EBA2 /* ThirdController.h */,
 				875D4BCF1DC451AD0022EBA2 /* ThirdController.m */,
 				90F8A4D81DD5B0D7000519FC /* 扫描scan */,
+				909627C21DE440E2004D9C5B /* JS交互 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -626,12 +648,8 @@
 			children = (
 				875D4C0D1DC454330022EBA2 /* QLCommonMethod.h */,
 				875D4C0E1DC454330022EBA2 /* QLCommonMethod.m */,
-				875D4C0F1DC454330022EBA2 /* QLTextField.h */,
-				875D4C101DC454330022EBA2 /* QLTextField.m */,
-				875D4C111DC454330022EBA2 /* QLViewCreateTool.h */,
-				875D4C121DC454330022EBA2 /* QLViewCreateTool.m */,
-				90FEA3D41DDE91E500D2C2B0 /* QLTopLeftLabel.h */,
-				90FEA3D51DDE91E500D2C2B0 /* QLTopLeftLabel.m */,
+				9041D3EC1DE8271E00AD72A4 /* 控件view */,
+				9041D3E41DE8159000AD72A4 /* 粒子动画之爱心 */,
 			);
 			name = Tools;
 			path = "Find(发现)/Tools";
@@ -656,6 +674,8 @@
 		875D4C201DC454E80022EBA2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9041D3FB1DE837D900AD72A4 /* Like-Blue@2x.png */,
+				9041D3FC1DE837D900AD72A4 /* Like@2x.png */,
 				875D4C211DC454E80022EBA2 /* 1.gif */,
 				875D4C221DC454E80022EBA2 /* 2.png */,
 				905329C01DCB0F790040D9DB /* micro_messenger.png */,
@@ -663,6 +683,7 @@
 				9028065C1DD06C0300A48FD7 /* emoji1.jpg */,
 				907AB10E1DD164540043CD7D /* cellback.gif */,
 				902806511DD05E9F00A48FD7 /* cars_total.plist */,
+				909627C71DE443E6004D9C5B /* index.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -780,6 +801,33 @@
 				875D4C621DC4552B0022EBA2 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		9041D3E41DE8159000AD72A4 /* 粒子动画之爱心 */ = {
+			isa = PBXGroup;
+			children = (
+				9041D3E51DE8161C00AD72A4 /* QLSnowView.h */,
+				9041D3E61DE8161C00AD72A4 /* QLSnowView.m */,
+				9041D3E81DE8178700AD72A4 /* favorite@2x.png */,
+				9041D3E91DE8178700AD72A4 /* favorite@3x.png */,
+				9041D3F81DE834E200AD72A4 /* QLExplosionView.h */,
+				9041D3F91DE834E200AD72A4 /* QLExplosionView.m */,
+				9041D3F01DE82C5200AD72A4 /* Sparkle.png */,
+			);
+			name = "粒子动画之爱心";
+			sourceTree = "<group>";
+		};
+		9041D3EC1DE8271E00AD72A4 /* 控件view */ = {
+			isa = PBXGroup;
+			children = (
+				875D4C111DC454330022EBA2 /* QLViewCreateTool.h */,
+				875D4C121DC454330022EBA2 /* QLViewCreateTool.m */,
+				875D4C0F1DC454330022EBA2 /* QLTextField.h */,
+				875D4C101DC454330022EBA2 /* QLTextField.m */,
+				90FEA3D41DDE91E500D2C2B0 /* QLTopLeftLabel.h */,
+				90FEA3D51DDE91E500D2C2B0 /* QLTopLeftLabel.m */,
+			);
+			name = "控件view";
 			sourceTree = "<group>";
 		};
 		905329B81DCB01E40040D9DB /* OpenSDK1.7.4 */ = {
@@ -909,6 +957,15 @@
 				908A75BF1CBB354D00FBF20B /* Info.plist */,
 			);
 			path = 4.11UITests;
+			sourceTree = "<group>";
+		};
+		909627C21DE440E2004D9C5B /* JS交互 */ = {
+			isa = PBXGroup;
+			children = (
+				909627C41DE44147004D9C5B /* QLWebJSController.h */,
+				909627C51DE44147004D9C5B /* QLWebJSController.m */,
+			);
+			name = "JS交互";
 			sourceTree = "<group>";
 		};
 		90F8A4D11DD5AF55000519FC /* 轮播图 */ = {
@@ -1150,9 +1207,12 @@
 			files = (
 				875D4C291DC454E80022EBA2 /* 2.png in Resources */,
 				908A75A81CBB354D00FBF20B /* LaunchScreen.storyboard in Resources */,
+				9041D3F11DE82C5200AD72A4 /* Sparkle.png in Resources */,
 				90FF34C61D73D37C007D5C61 /* Configuration.plist in Resources */,
 				905329C31DCB1CE30040D9DB /* jianshu.png in Resources */,
+				9041D3FE1DE837D900AD72A4 /* Like@2x.png in Resources */,
 				875D4C751DC4552B0022EBA2 /* icon_rightarrow@2x.png in Resources */,
+				909627C81DE443E6004D9C5B /* index.html in Resources */,
 				902806521DD05E9F00A48FD7 /* cars_total.plist in Resources */,
 				907AB10F1DD164540043CD7D /* cellback.gif in Resources */,
 				9028065D1DD06C0300A48FD7 /* emoji1.jpg in Resources */,
@@ -1162,11 +1222,14 @@
 				90FF34C81D73D386007D5C61 /* Configuration.plist in Resources */,
 				875D4C761DC4552B0022EBA2 /* red_line_and_shadow@2x.png in Resources */,
 				875D4C631DC4552B0022EBA2 /* Info.plist in Resources */,
+				9041D3EB1DE8178700AD72A4 /* favorite@3x.png in Resources */,
 				90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */,
+				9041D3EA1DE8178700AD72A4 /* favorite@2x.png in Resources */,
 				908A75A51CBB354D00FBF20B /* Assets.xcassets in Resources */,
 				90FF34C11D73D315007D5C61 /* Configuration.plist in Resources */,
 				905329BF1DCB01E40040D9DB /* README.txt in Resources */,
 				908A75A31CBB354D00FBF20B /* Main.storyboard in Resources */,
+				9041D3FD1DE837D900AD72A4 /* Like-Blue@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,14 +1360,17 @@
 				875D4BE61DC451AD0022EBA2 /* ViewController8.m in Sources */,
 				875D4C0B1DC4535C0022EBA2 /* SplashScreenView.m in Sources */,
 				875D4BE81DC451AD0022EBA2 /* WKWebViewController.m in Sources */,
+				9041D3FA1DE834E200AD72A4 /* QLExplosionView.m in Sources */,
 				875D4BDD1DC451AD0022EBA2 /* CTPropertyViewController.m in Sources */,
 				875D4C771DC4552B0022EBA2 /* SWRevealViewController.m in Sources */,
 				875D4C661DC4552B0022EBA2 /* MASConstraintMaker.m in Sources */,
 				875D4BDB1DC451AD0022EBA2 /* FallWaterCell.m in Sources */,
 				875D4C1E1DC454880022EBA2 /* NSObject+Property.m in Sources */,
+				9041D3E71DE8161C00AD72A4 /* QLSnowView.m in Sources */,
 				875D4C711DC4552B0022EBA2 /* PCCircleInfoView.m in Sources */,
 				875D4BEE1DC451AD0022EBA2 /* QLCollectionViewFlowLayout.m in Sources */,
 				875D4C6F1DC4552B0022EBA2 /* PCCircleViewConst.m in Sources */,
+				909627C61DE44147004D9C5B /* QLWebJSController.m in Sources */,
 				90FEA3D61DDE91E500D2C2B0 /* QLTopLeftLabel.m in Sources */,
 				875D4C0A1DC4535C0022EBA2 /* SplashScreenDataManager.m in Sources */,
 				875D4BD81DC451AD0022EBA2 /* SViewControllerDemo2.m in Sources */,

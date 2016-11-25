@@ -28,8 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    
-    //view添加浮动动画
+    // view添加浮动动画
     [self setBtnAnimation];
 }
 
@@ -196,7 +195,9 @@
 }
 
 
-
+/**
+ * 按钮添加动画
+ */
 - (void)setBtnAnimation
 {
     
@@ -254,6 +255,7 @@
         }
     }
 }
+
 
 
 #pragma mark ----codeTests-----
