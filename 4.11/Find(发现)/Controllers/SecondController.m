@@ -16,7 +16,7 @@
 #import "QLUploadFileController.h"
 #import "QLMapLocationController.h"
 #import "QLNormalScrollController.h"
-
+#import "QLSpreadController.h" //转场动画
 
 #import "QLTextField.h"
 
@@ -93,10 +93,15 @@
     imageView.tag = 100;
     imageView.layer.masksToBounds = YES;
     imageView.backgroundColor = [UIColor colorWithRed:0.99f green:0.89f blue:0.49f alpha:1.00f];
+    imageView.userInteractionEnabled = YES;
     [self.scrollView addSubview:imageView];
     
+    UIButton *modalBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(CGRectGetMaxX(tableViewBtn.frame) + 20, 10, 70, 30) title:@"present" target:self sel:@selector(presentVC)];
+    [self.scrollView addSubview:modalBtn];
     
-
+    UIButton *pushBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(CGRectGetMaxX(modalBtn.frame) + 20, 10, 50, 30) title:@"push" target:self sel:@selector(pushVC)];
+    [self.scrollView addSubview:pushBtn];
+    
 }
 /**
  *  到搜索页面
@@ -256,7 +261,23 @@
     }
 }
 
+/**
+ *  modal到下一控制器
+ */
+- (void)presentVC
+{
+    QLSpreadController *spreadVC = [[QLSpreadController alloc] init];
+    [self presentViewController:spreadVC animated:YES completion:nil];
+}
 
+/**
+ *  push到下一控制器
+ */
+- (void)pushVC
+{
+    QLSpreadController *spreadVC = [[QLSpreadController alloc] init];
+    [self.navigationController pushViewController:spreadVC animated:YES];
+}
 
 #pragma mark ----codeTests-----
 - (void)codeTests

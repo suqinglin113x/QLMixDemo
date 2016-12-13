@@ -33,6 +33,27 @@ static NSInteger imageCount = 5;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
 
+    //普通滚动
+    [self normalRoll];
+    
+    //无限轮播
+    UIButton *button = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, KScreenSize.height - 100, 150, 30) title:@"到无限轮播" target:self sel:@selector(toInfiniteRoll)];
+    [self.view addSubview:button];
+    
+}
+
+
+#pragma mark --- 无限滚动--
+- (void)toInfiniteRoll
+{
+    QLMaxScrollController *infiniteScrollVC = [[QLMaxScrollController alloc] init];
+    [self.navigationController pushViewController:infiniteScrollVC animated:YES];
+    
+}
+
+#pragma mark --- 基本轮播--
+- (void)normalRoll
+{
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 200, KScreenSize.width, 200)];
     self.scrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:self.scrollView];
@@ -42,8 +63,7 @@ static NSInteger imageCount = 5;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.bounces = YES;
-
-
+    
     for (int i = 0; i < imageCount; i ++) {
         NSString *imageName = [NSString stringWithFormat:@"food%d", i + 1];
         UIImageView  *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(i *KScrollView_W, 0, KScrollView_W, 200)];
@@ -52,8 +72,7 @@ static NSInteger imageCount = 5;
         imageView.image = [UIImage imageNamed:imageName];
         [self.scrollView addSubview:imageView];
     }
-
-
+    
     //页码
     self.pageControl = [[UIPageControl alloc] init];
     self.pageControl.pageIndicatorTintColor = [UIColor greenColor];
@@ -61,21 +80,9 @@ static NSInteger imageCount = 5;
     self.pageControl.center = CGPointMake(KScrollView_W / 2, CGRectGetMaxY(_scrollView.frame) - 10);
     self.pageControl.numberOfPages = imageCount;
     [self.view addSubview:self.pageControl];
-
+    
     //定时器
     [self startTimer];
-    
-    
-    UIButton *button = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, KScreenSize.height - 100, 150, 30) title:@"到无限轮播" target:self sel:@selector(toInfiniteRoll)];
-    [self.view addSubview:button];
-    
-}
-
-- (void)toInfiniteRoll
-{
-    QLMaxScrollController *infiniteScrollVC = [[QLMaxScrollController alloc] init];
-    [self.navigationController pushViewController:infiniteScrollVC animated:YES];
-    
 }
 
 // 开始NSTimer

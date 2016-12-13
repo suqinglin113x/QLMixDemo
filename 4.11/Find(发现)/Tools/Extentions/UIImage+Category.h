@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Category)
+
 + (UIImage *)xh_imageNamed:(NSString *)name;
 
 
-// 根据颜色生成一张尺寸为1*1的相同颜色图片
+/** 根据颜色生成一张尺寸为1*1的相同颜色图片*/
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+/**屏幕截图*/
++ (instancetype)captureWithView:(UIView *)view;
 @end

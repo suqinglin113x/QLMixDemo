@@ -78,7 +78,7 @@
 {
     NSLog(@"%s,info == %@",__func__,info);
     
-    UIImage *Image = [self fixOrientation:[info objectForKey:@"UIImagePickerControllerOriginalImage"]];
+    [self fixOrientation:[info objectForKey:@"UIImagePickerControllerOriginalImage"]];
     
 }
 //修正照片方向

@@ -43,13 +43,13 @@ static const CGFloat defaultFontSize = 15.f;
 
 
 
-//# define QLLog(fmt,...)  NSLog((@"%s" fmt),__PRETTY_FUNCTION__,##__VA_ARGS__);
 # define SYLog(fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 #ifdef DEBUG
 
-//#define QLLog(...) NSLog(__VA_ARGS__)
-
+/* //参数：打印在哪个方法，哪一行
+# define QLLog(fmt, ...)  NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+*/
 //ios 10 之后
 #define QLLog(...) printf("%s\n",[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
 

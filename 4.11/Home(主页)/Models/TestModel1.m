@@ -46,17 +46,22 @@
     
 }
 
+/**链式编程*/
 - (TestModel1 *(^)(NSInteger))add
 {
-    return ^ id(NSInteger num){
+    return ^(NSInteger num){
+        //执行功能操作
         self.result += num;
+        //必须返回对象本身
         return self;
     };
 }
 - (TestModel1 *(^)(NSInteger))minus
 {
     return ^id (NSInteger num){
+        //执行功能代码
         self.result -= num;
+        //返回对象本身
         return self;
     };
 }

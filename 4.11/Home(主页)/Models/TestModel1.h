@@ -27,6 +27,7 @@ typedef  NSInteger age;
 @property(nonatomic)age a;
 
 @property (nonatomic, assign) NSInteger result;
+/**链式编程 采用block方式，返回值为类对象本身*/
 @property (nonatomic, readonly, copy) TestModel1 *(^add)(NSInteger num);
 @property (nonatomic, readonly, copy) TestModel1 *(^minus)(NSInteger num);
 

@@ -11,6 +11,7 @@
 typedef enum : NSUInteger {
     QLInfinitRollScrollViewTypePortrait,    //竖roll
     QLInfinitRollScrollViewTypelandscape,   //横roll
+    
 } QLInfinitRollScrollViewType;
 
 @class QLInfinitRollScrollView;

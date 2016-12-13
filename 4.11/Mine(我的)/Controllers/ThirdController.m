@@ -112,7 +112,14 @@
     btn.selected = !btn.selected;
     if (btn.isSelected) {
         
-        [btn setImage:[UIImage imageNamed:@"Like-Blue"] forState:UIControlStateNormal];
+        //法一：抖动效果
+        CAKeyframeAnimation *shakeAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+        shakeAnimation.duration = 0.2;
+        shakeAnimation.values = @[@0, @(-0.2), @0.2, @0];
+        shakeAnimation.repeatCount = 2;
+        [btn.layer addAnimation:shakeAnimation forKey:nil];
+        
+        [btn setImage:[UIImage imageNamed:@"Like-Blue"] forState:UIControlStateSelected];
         QLExplosionView *exploV = [[QLExplosionView alloc] initWithFrame:btn.bounds];
         [btn addSubview:exploV];
         [exploV animate];
@@ -133,4 +140,6 @@
         [btn setImage:[UIImage imageNamed:@"Like"] forState:UIControlStateNormal];
     }
 }
+
+
 @end

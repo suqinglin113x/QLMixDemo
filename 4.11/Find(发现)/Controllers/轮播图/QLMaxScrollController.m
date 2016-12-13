@@ -34,8 +34,11 @@
                               [UIImage imageNamed:@"food3"],
                               [UIImage imageNamed:@"food4"],
                               [UIImage imageNamed:@"food5"]];
-//    scrollView.imageViewCount = 3;//使用三个控件
-    scrollView.rollDirectionType = QLInfinitRollScrollViewTypelandscape;
+    //使用的控件数
+//    scrollView.imageViewCount = 3;
+    //滚动方向
+    scrollView.rollDirectionType = QLInfinitRollScrollViewTypePortrait;
+    
     scrollView.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
     scrollView.pageControl.pageIndicatorTintColor = [UIColor greenColor];
     
