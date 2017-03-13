@@ -10,7 +10,6 @@
 
 @interface QLSnowView : UIView
 
-
 - (void)startAnimation;
 
 @end

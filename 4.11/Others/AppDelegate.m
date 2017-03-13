@@ -106,6 +106,10 @@
     
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     nav1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"主页" image:nil tag:10001];
+    nav1.tabBarItem.badgeValue = @"2"; // 角标
+    if (currentSystemVersion > __IPHONE_10_0) { // 角标颜色ios10
+        nav1.tabBarItem.badgeColor = [UIColor greenColor];
+    }
     
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[SecondController new]];
     nav2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"发现" image:nil tag:1002];
@@ -115,9 +119,8 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     tabBarController.viewControllers = @[nav2, nav1, nav3];
-    
-    
-    
+    tabBarController.tabBar.barTintColor = [UIColor redColor];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica-Bold" size:15], NSFontAttributeName, nil] forState:UIControlStateNormal];
     self.window.rootViewController = tabBarController;
     
 }

@@ -9,8 +9,9 @@
 #import "ThirdController.h"
 #import "QLScanViewController.h"
 #import "QLWebJSController.h"
+#import "QLSnowController.h"
+#import "PopoverView.h" // 菜单
 #import "QLExplosionView.h" //点击按钮爆炸效果
-#import "QLSnowView.h" //爱心粒子
 
 
 @implementation ThirdController
@@ -21,8 +22,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     
-    // 粒子动画
-    [self addSnowFlow];
 }
 
 - (void)viewDidLoad {
@@ -30,7 +29,10 @@
     
     self.navigationItem.title = self.title = @"我的";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    // 右侧加好➕
+    UIButton *btn = [QLViewCreateTool createButtonWithFrame:CGRectMake(0, 0, 30, 30) title:nil target:self sel:@selector(rightBtnClick:)];
+    [btn setBackgroundImage:[UIImage imageNamed:@"jiahao"] forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
     [self createUI];
     
@@ -38,6 +40,7 @@
 
 - (void)createUI
 {
+    //  赞👍按钮
     UIButton  *goodBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(KScreenSize.width - 50, 100, 30, 30) title:nil target:self sel:@selector(goodBtnClick:)];
     goodBtn.backgroundColor = [UIColor clearColor];
     [goodBtn setImage:[UIImage imageNamed:@"Like"] forState:UIControlStateNormal];
@@ -56,6 +59,20 @@
     UIButton *JSBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 150, 150, 30) title:@"点我到JS" target:self sel:@selector(toJSweb)];
     [self.view addSubview:JSBtn];
     
+    UIButton *snowBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 200, 150, 30) title:@"点我到下雪" target:self sel:@selector(toSnow)];
+    [self.view addSubview:snowBtn];
+    
+    
+}
+
+/**
+ *  到下雪页面
+ */
+- (void)toSnow
+{
+    QLSnowController *snowVC = [[QLSnowController alloc] init];
+    snowVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:snowVC animated:YES];
 }
 
 /**
@@ -96,17 +113,9 @@
     
 }
 
-
 /**
- * 粒子动画
+ *  点赞 action
  */
-- (void)addSnowFlow
-{
-    QLSnowView *snowView = [[QLSnowView alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
-    [self.view addSubview:snowView];
-}
-
-
 - (void)goodBtnClick:(UIButton *)btn
 {
     btn.selected = !btn.selected;
@@ -141,5 +150,23 @@
     }
 }
 
-
+/**
+ *  弹出菜单
+ */
+- (void)rightBtnClick:(UIButton *)btn
+{
+    PopoverAction *action1 = [PopoverAction actionWithImage:[UIImage imageNamed:@"contacts_add_newmessage"] title:@"发起群聊" handler:^(PopoverAction *action) {
+    }];
+    PopoverAction *action2 = [PopoverAction actionWithImage:[UIImage imageNamed:@"contacts_add_friend"] title:@"添加朋友" handler:^(PopoverAction *action) {
+    }];
+    PopoverAction *action3 = [PopoverAction actionWithImage:[UIImage imageNamed:@"contacts_add_scan"] title:@"扫一扫" handler:^(PopoverAction *action) {
+    }];
+    PopoverAction *action4 = [PopoverAction actionWithImage:[UIImage imageNamed:@"contacts_add_money"] title:@"收付款" handler:^(PopoverAction *action) {
+    }];
+    
+    PopoverView *popoverView = [PopoverView popoverView];
+    popoverView.style = PopoverViewStyleDark;
+    // 在没有系统控件的情况下调用可以使用显示在指定的点坐标的方法弹出菜单控件.
+    [popoverView showToView:btn withActions:@[action1, action2, action3, action4]];
+}
 @end

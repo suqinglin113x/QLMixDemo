@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.webView];

@@ -77,8 +77,11 @@ static NSInteger imageCount = 5;
     self.pageControl = [[UIPageControl alloc] init];
     self.pageControl.pageIndicatorTintColor = [UIColor greenColor];
     self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
-    self.pageControl.center = CGPointMake(KScrollView_W / 2, CGRectGetMaxY(_scrollView.frame) - 10);
+    self.pageControl.center = CGPointMake(KScrollView_W / 2, CGRectGetMaxY(_scrollView.frame) + 10);
+    self.pageControl.bounds = CGRectMake(0, 0, 200, 10);
     self.pageControl.numberOfPages = imageCount;
+    [_pageControl setValue:[UIImage imageNamed:@"indicatorDefault.png"] forKey:@"_pageImage"];
+    [_pageControl setValue:[UIImage imageNamed:@"indicatorHigjtlight"] forKey:@"currentPageImage"];
     [self.view addSubview:self.pageControl];
     
     //定时器
