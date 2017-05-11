@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, QLSpreadTransitionType) {
     QLSpreadTransitionTypePop = 3
 };
 
-@interface QLSpread : NSObject <CAAnimationDelegate, UIViewControllerAnimatedTransitioning>
+@interface QLSpread : NSObject < UIViewControllerAnimatedTransitioning, CAAnimationDelegate>
 
 @property (nonatomic, assign) QLSpreadTransitionType type;
 

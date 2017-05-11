@@ -10,8 +10,10 @@
 #import "QLSpread.h"
 
 
-@interface QLSpreadController () <UIViewControllerTransitioningDelegate,
-                                    UINavigationControllerDelegate>
+@interface QLSpreadController ()
+<UIViewControllerTransitioningDelegate,
+UINavigationControllerDelegate>
+
 /**导航方式push、pop、none*/
 @property (nonatomic, assign) UINavigationControllerOperation operation;
 
@@ -19,17 +21,13 @@
 
 @implementation QLSpreadController
 
-- (void)dealloc
-{
-    
-    self.transitioningDelegate = nil;
-    
-}
 
 - (instancetype)init
 {
     if (self = [super init]) {
+        // 设置专场的代理
         self.transitioningDelegate = self;
+        // 选择modal的方式为自定义
         self.modalPresentationStyle = UIModalPresentationCustom;
     }
     return self;
@@ -50,6 +48,7 @@
 }
 
 #pragma mark --modal 动画---
+/// dismiss按钮点击事件
 - (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -86,5 +85,11 @@
 //    }
 //}
 
+
+
+- (void)dealloc
+{
+    self.transitioningDelegate = nil;
+}
 @end
 

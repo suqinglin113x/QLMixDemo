@@ -97,7 +97,7 @@
     CGFloat y = MAX(100, containView.frame.size.height - 100);
     CGFloat radius = sqrtf(pow(x, 2) + pow(y, 2));
     UIBezierPath *endCycle = [UIBezierPath bezierPathWithArcCenter:containView.center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
-    
+
     //2、创建CAShapeLayer进行覆盖
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.path = endCycle.CGPath;

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		56F401DE9F677296A91FB9D5 /* libPods-4.11.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FCC6AB27258E85F4DCB0EE /* libPods-4.11.a */; };
 		7FDA604A9B5F21940E79CF08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1153033B3AEF45D041D32F /* libPods.a */; };
+		8742F51A1EC34F4100CAC85E /* QLPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742F5191EC34F4100CAC85E /* QLPhotoController.m */; };
+		8742F51E1EC3564B00CAC85E /* QLPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742F51C1EC3564B00CAC85E /* QLPhotoCell.m */; };
+		8742F51F1EC3564B00CAC85E /* QLPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8742F51D1EC3564B00CAC85E /* QLPhotoCell.xib */; };
+		8742F5261EC36BCB00CAC85E /* QLPhotoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742F5251EC36BCB00CAC85E /* QLPhotoLayout.m */; };
 		875D4BD51DC451AD0022EBA2 /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875D4B891DC451AD0022EBA2 /* SecondController.m */; };
 		875D4BD61DC451AD0022EBA2 /* SEViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 875D4B8B1DC451AD0022EBA2 /* SEViewController1.m */; };
 		875D4BD71DC451AD0022EBA2 /* SViewController2demo1.m in Sources */ = {isa = PBXBuildFile; fileRef = 875D4B8D1DC451AD0022EBA2 /* SViewController2demo1.m */; };
@@ -164,6 +168,14 @@
 		23E59A19B43258ED1646B64E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		29FCC6AB27258E85F4DCB0EE /* libPods-4.11.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-4.11.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2AE8BFB2C1619C5AA8EFEC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8742F5181EC34F4100CAC85E /* QLPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLPhotoController.h; sourceTree = "<group>"; };
+		8742F5191EC34F4100CAC85E /* QLPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLPhotoController.m; sourceTree = "<group>"; };
+		8742F51B1EC3564B00CAC85E /* QLPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLPhotoCell.h; sourceTree = "<group>"; };
+		8742F51C1EC3564B00CAC85E /* QLPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLPhotoCell.m; sourceTree = "<group>"; };
+		8742F51D1EC3564B00CAC85E /* QLPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QLPhotoCell.xib; sourceTree = "<group>"; };
+		8742F5231EC3637D00CAC85E /* QLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLMacro.h; sourceTree = "<group>"; };
+		8742F5241EC36BCB00CAC85E /* QLPhotoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLPhotoLayout.h; sourceTree = "<group>"; };
+		8742F5251EC36BCB00CAC85E /* QLPhotoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLPhotoLayout.m; sourceTree = "<group>"; };
 		875D4B881DC451AD0022EBA2 /* SecondController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
 		875D4B891DC451AD0022EBA2 /* SecondController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
 		875D4B8A1DC451AD0022EBA2 /* SEViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEViewController1.h; sourceTree = "<group>"; };
@@ -433,6 +445,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8742F5171EC34F1400CAC85E /* 照片浏览 */ = {
+			isa = PBXGroup;
+			children = (
+				8742F5181EC34F4100CAC85E /* QLPhotoController.h */,
+				8742F5191EC34F4100CAC85E /* QLPhotoController.m */,
+				8742F5241EC36BCB00CAC85E /* QLPhotoLayout.h */,
+				8742F5251EC36BCB00CAC85E /* QLPhotoLayout.m */,
+				8742F51B1EC3564B00CAC85E /* QLPhotoCell.h */,
+				8742F51C1EC3564B00CAC85E /* QLPhotoCell.m */,
+				8742F51D1EC3564B00CAC85E /* QLPhotoCell.xib */,
+			);
+			path = "照片浏览";
+			sourceTree = "<group>";
+		};
 		875D4B801DC451AD0022EBA2 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +484,7 @@
 				90E073391DEFBCEB0085228E /* 搜索 */,
 				90E0733C1DEFBCEB0085228E /* 文件下载上传 */,
 				90E073411DEFBCEB0085228E /* 转场动画modal */,
+				8742F5171EC34F1400CAC85E /* 照片浏览 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -881,6 +908,7 @@
 				903F51971E262BA000012EE1 /* JUSTFORFUN.m */,
 				90DCC1E51DAA29C700EE02CF /* Localizable.strings */,
 				907126E51D4880EE00333E6D /* PrefixHeader.pch */,
+				8742F5231EC3637D00CAC85E /* QLMacro.h */,
 				901C17361D45B2900043D93D /* ImageIO.framework */,
 				907C8B3F1CE187AE0041B709 /* Accelerate.framework */,
 				907C8B3D1CE187990041B709 /* CoreFoundation.framework */,
@@ -1157,7 +1185,7 @@
 				TargetAttributes = {
 					908A75941CBB354D00FBF20B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 95V9X93GJM;
+						DevelopmentTeam = QGWN647PA4;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -1222,6 +1250,7 @@
 				875D4C631DC4552B0022EBA2 /* Info.plist in Resources */,
 				9041D3EB1DE8178700AD72A4 /* favorite@3x.png in Resources */,
 				90DCC1E31DAA29C700EE02CF /* Localizable.strings in Resources */,
+				8742F51F1EC3564B00CAC85E /* QLPhotoCell.xib in Resources */,
 				9041D3EA1DE8178700AD72A4 /* favorite@2x.png in Resources */,
 				908A75A51CBB354D00FBF20B /* Assets.xcassets in Resources */,
 				90FF34C11D73D315007D5C61 /* Configuration.plist in Resources */,
@@ -1327,6 +1356,7 @@
 				875D4BD91DC451AD0022EBA2 /* QLAnnotation.m in Sources */,
 				875D4C1D1DC454880022EBA2 /* MBProgressHUD+ShowMessage.m in Sources */,
 				875D4BD61DC451AD0022EBA2 /* SEViewController1.m in Sources */,
+				8742F51A1EC34F4100CAC85E /* QLPhotoController.m in Sources */,
 				875D4C151DC454330022EBA2 /* QLViewCreateTool.m in Sources */,
 				875D4BEA1DC451AD0022EBA2 /* TestModel1.m in Sources */,
 				875D4C6B1DC4552B0022EBA2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1362,6 +1392,7 @@
 				875D4BE11DC451AD0022EBA2 /* ViewController3.m in Sources */,
 				875D4BE61DC451AD0022EBA2 /* ViewController8.m in Sources */,
 				90E073491DEFBCEB0085228E /* QLDownloadFileController.m in Sources */,
+				8742F51E1EC3564B00CAC85E /* QLPhotoCell.m in Sources */,
 				875D4C0B1DC4535C0022EBA2 /* SplashScreenView.m in Sources */,
 				90E073541DEFBD420085228E /* QLInfinitRollScrollView.m in Sources */,
 				875D4BE81DC451AD0022EBA2 /* WKWebViewController.m in Sources */,
@@ -1372,6 +1403,7 @@
 				875D4C1E1DC454880022EBA2 /* NSObject+Property.m in Sources */,
 				9041D3E71DE8161C00AD72A4 /* QLSnowView.m in Sources */,
 				875D4C711DC4552B0022EBA2 /* PCCircleInfoView.m in Sources */,
+				8742F5261EC36BCB00CAC85E /* QLPhotoLayout.m in Sources */,
 				903F51781E23860200012EE1 /* PopoverViewCell.m in Sources */,
 				875D4BEE1DC451AD0022EBA2 /* QLCollectionViewFlowLayout.m in Sources */,
 				875D4C6F1DC4552B0022EBA2 /* PCCircleViewConst.m in Sources */,
@@ -1544,6 +1576,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QGWN647PA4;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = 4.11/Info.plist;
@@ -1566,6 +1599,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QGWN647PA4;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = 4.11/Info.plist;
@@ -1682,6 +1716,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = 4.11/4.11.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QGWN647PA4;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = 4.11/Info.plist;

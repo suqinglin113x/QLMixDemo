@@ -16,6 +16,7 @@
 #import "MBProgressHUD+ShowMessage.h"
 #import "UIImage+Category.h"
 
+#import "QLMacro.h" // 常量文件
 
 #import "SDImageCache.h"
 #import <Twitter/Twitter.h>
@@ -28,31 +29,3 @@
 #import "ThrowLineTool.h"
 #import "CALayer+Anim.h"
 #import "QLViewCreateTool.h"
-
-/****           宏定义         ****/
-
-#define KScreenSize [[UIScreen mainScreen] bounds].size
-#define adoptValue(a) ((KScreenSize.width/375.0) * a)
-#define defaultColor [UIColor colorWithRed:38/255.0 green:38/255.0 blue:38/255.0 alpha:0.6]
-#define defaultFontTextColor [UIColor greenColor]
-#define currentSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
-
-/****           常量区         ****/
-static const CGFloat defaultCornerRadius = 10.f;
-static const CGFloat defaultFontSize = 15.f;
-
-
-
-#ifdef DEBUG
-
- //参数：打印在哪个方法，哪一行
-# define QLLog(fmt, ...)  NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-
-//ios 10 之后
-//#define QLLog(...) printf("%s\n",[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
-
-#else
-
-#define QLLog(...)
-
-#endif

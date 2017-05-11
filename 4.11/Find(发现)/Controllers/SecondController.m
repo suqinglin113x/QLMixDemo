@@ -17,7 +17,7 @@
 #import "QLMapLocationController.h"
 #import "QLNormalScrollController.h"
 #import "QLSpreadController.h" //转场动画
-
+#import "QLPhotoController.h" // 照片浏览
 #import "QLTextField.h"
 
 @interface SecondController ()<UISearchBarDelegate>
@@ -101,6 +101,10 @@
     
     UIButton *pushBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(CGRectGetMaxX(modalBtn.frame) + 20, 10, 50, 30) title:@"push" target:self sel:@selector(pushVC)];
     [self.scrollView addSubview:pushBtn];
+    
+    UIButton *photoBtn = [QLViewCreateTool createButtonWithFrame:CGRectMake(10, 290, 150, 30) title:@"点我到照片墙" target:self sel:@selector(toPhotoVC)];
+    [self.scrollView addSubview:photoBtn];
+    
     
 }
 /**
@@ -199,6 +203,14 @@
     [self.navigationController pushViewController:adVc animated:YES];
 }
 
+/**
+ * 到照片浏览
+ */
+- (void)toPhotoVC
+{
+    QLPhotoController *photoVC = [[QLPhotoController alloc] init];
+    [self.navigationController pushViewController:photoVC animated:YES];
+}
 
 /**
  * 按钮添加动画
