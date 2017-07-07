@@ -176,6 +176,7 @@
 
 - (void)autoScroll
 {
+    
     if (self.rollDirectionType == QLInfinitRollScrollViewTypePortrait) {
         [self.scrollView setContentOffset:CGPointMake(0, 2 *self.scrollView.frame.size.height) animated:YES];
     }else{
